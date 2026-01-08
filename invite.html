@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation — Cadavre Exquis des Futurs</title>
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+    <!-- Vue: Landing invitation -->
+    <div data-view="landing" class="invite-page">
+        <div class="invite-content">
+            <p class="invite-greeting" data-personalize="greeting"></p>
+
+            <div class="invite-message">
+                <p>Je t'écris pour te proposer un format très particulier,
+                à la frontière entre conversation, œuvre collective et prospective.</p>
+
+                <p>Avant d'aller plus loin, j'aimerais savoir si ce jeu pourrait t'intéresser
+                et si les contraintes logistiques sont compatibles de ton côté.</p>
+            </div>
+
+            <div class="invite-info">
+                <p>Le formulaire suivant prend environ <strong>5 minutes</strong>.<br>
+                Il ne vaut pas engagement définitif.</p>
+            </div>
+
+            <button type="button" class="btn btn--primary" onclick="showView('form')">
+                Répondre au formulaire
+            </button>
+        </div>
+    </div>
+
+    <!-- Vue: Formulaire -->
+    <div data-view="form" class="invite-page">
+        <div class="invite-content" style="max-width: var(--max-width-content);">
+            <div class="invite-form-header">
+                <p class="invite-greeting" data-personalize="greeting"></p>
+                <p class="text-secondary">Formulaire de pré-inscription</p>
+            </div>
+
+            <form id="invite-form" class="invite-form">
+                <!-- Section A: Intérêt & disponibilité -->
+                <div class="form-section">
+                    <h3 class="form-section-title">A. Intérêt & disponibilité</h3>
+
+                    <!-- A1 -->
+                    <div class="form-group">
+                        <p class="form-label">Le format t'intrigue-t-il ?</p>
+                        <div class="form-options-grid">
+                            <label class="form-option">
+                                <input type="radio" name="A1" value="partant" required>
+                                <span class="form-option-text">Oui, partant·e</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="radio" name="A1" value="curieux">
+                                <span class="form-option-text">Oui, curieux·se mais réservé·e</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="radio" name="A1" value="non">
+                                <span class="form-option-text">Non, pas cette fois</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- A2 -->
+                    <div class="form-group">
+                        <p class="form-label">Créneaux possibles</p>
+                        <p class="form-hint">Plusieurs choix possibles</p>
+                        <div class="form-options-grid" style="margin-top: var(--space-3);">
+                            <label class="form-option">
+                                <input type="checkbox" name="A2" value="vendredi-pm">
+                                <span class="form-option-text">Vendredi après-midi (plan A)</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="checkbox" name="A2" value="jeudi-pm">
+                                <span class="form-option-text">Jeudi après-midi (plan B)</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="checkbox" name="A2" value="les-deux">
+                                <span class="form-option-text">Les deux</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="checkbox" name="A2" value="jeudi-am">
+                                <span class="form-option-text">Jeudi matin</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="checkbox" name="A2" value="vendredi-am">
+                                <span class="form-option-text">Vendredi matin</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="checkbox" name="A2" value="samedi-am">
+                                <span class="form-option-text">Samedi matin</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="checkbox" name="A2" value="samedi-pm">
+                                <span class="form-option-text">Samedi après-midi</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="checkbox" name="A2" value="inconnu">
+                                <span class="form-option-text">Je ne sais pas encore</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- A3 -->
+                    <div class="form-group">
+                        <label class="form-label" for="A3">Y a-t-il des contraintes importantes à connaître ?</label>
+                        <textarea id="A3" name="A3" class="form-textarea" placeholder="Contraintes logistiques, horaires, accessibilité..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Section B: Confort avec le cadre -->
+                <div class="form-section">
+                    <h3 class="form-section-title">B. Confort avec le cadre</h3>
+
+                    <!-- B1 -->
+                    <div class="form-group">
+                        <p class="form-label">Te sentirais-tu à l'aise avec les principes suivants ?</p>
+                        <div class="form-options-grid" style="margin-top: var(--space-3);">
+                            <label class="form-option">
+                                <input type="checkbox" name="B1" value="hypothese-radicale">
+                                <span class="form-option-text">Défendre une hypothèse radicale</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="checkbox" name="B1" value="mettre-en-crise">
+                                <span class="form-option-text">Mettre en crise une hypothèse portée par quelqu'un d'autre (que tu ne connais pas)</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="checkbox" name="B1" value="laisser-echapper">
+                                <span class="form-option-text">Laisser une idée m'échapper</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="checkbox" name="B1" value="ecoute-ia">
+                                <span class="form-option-text">Être écouté par une IA</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- B2 -->
+                    <div class="form-group">
+                        <p class="form-label">Ton ressenti global</p>
+                        <div class="form-options-grid">
+                            <label class="form-option">
+                                <input type="radio" name="B2" value="amuse" required>
+                                <span class="form-option-text">Oui, ça m'amuse</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="radio" name="B2" value="cadre">
+                                <span class="form-option-text">Oui, avec un cadre clair</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="radio" name="B2" value="non">
+                                <span class="form-option-text">Plutôt non</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- B3 -->
+                    <div class="form-group">
+                        <label class="form-label" for="B3">Point de vigilance éventuel</label>
+                        <textarea id="B3" name="B3" class="form-textarea" placeholder="Optionnel"></textarea>
+                    </div>
+                </div>
+
+                <!-- Section C: Affinités de chevauchement -->
+                <div class="form-section">
+                    <h3 class="form-section-title">C. Affinités de chevauchement</h3>
+
+                    <!-- C1 -->
+                    <div class="form-group">
+                        <p class="form-label">Quand tu arriveras, tu rejoindras un intervenant pendant 20 minutes, puis 20 minutes après son départ un autre intervenant va venir te rejoindre pour 20 minutes. Quels sont les croisements que tu aurais envie de vivre ?</p>
+                        <div class="form-options-grid" id="invitees-list" style="margin-top: var(--space-3);">
+                            <!-- Rempli dynamiquement -->
+                        </div>
+                        <p class="note" style="margin-top: var(--space-4);">
+                            NB : Nous envoyons ce formulaire en simultané à tout le monde, il nous est donc évidemment impossible de savoir qui sera vraiment là le jour J.
+                        </p>
+                    </div>
+
+                    <!-- C2 -->
+                    <div class="form-group">
+                        <label class="form-label form-label--secondary" for="C2">Y a-t-il un croisement à éviter ?</label>
+                        <textarea id="C2" name="C2" class="form-textarea" placeholder="Optionnel — cette information reste confidentielle"></textarea>
+                    </div>
+                </div>
+
+                <!-- Section D: Cartes / bascules -->
+                <div class="form-section">
+                    <h3 class="form-section-title">D. Cartes / bascules</h3>
+
+                    <!-- D1 -->
+                    <div class="form-group">
+                        <p class="form-label">Parmi ces bascules, lesquelles te font le plus réagir ?</p>
+                        <p class="form-hint">Maximum 3 choix</p>
+                        <div class="form-options-grid" id="bascules-list" style="margin-top: var(--space-3);">
+                            <!-- Rempli dynamiquement -->
+                        </div>
+                    </div>
+
+                    <!-- D2: Réactions par bascule (affichées dynamiquement) -->
+                    <div id="bascule-reactions" style="display: none;">
+                        <p class="form-label">Pour chaque bascule sélectionnée : est-ce souhaitable ou probable ?</p>
+                        <div id="bascule-reactions-list">
+                            <!-- Rempli dynamiquement -->
+                        </div>
+                    </div>
+
+                    <!-- D3 -->
+                    <div class="form-group" style="margin-top: var(--space-8);">
+                        <label class="form-label" for="D3">Si tu le souhaites, propose une bascule</label>
+                        <input type="text" id="D3" name="D3" class="form-input" placeholder="En 2036, …">
+                    </div>
+
+                    <!-- D4 -->
+                    <div class="form-group" id="D4-group" style="display: none;">
+                        <label class="form-option">
+                            <input type="checkbox" name="D4" value="consent" id="D4">
+                            <span class="form-option-text">J'accepte que cette proposition soit reformulée ou détruite sans attribution</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Section E: Consentements -->
+                <div class="form-section">
+                    <h3 class="form-section-title">E. Consentements</h3>
+
+                    <!-- E1 -->
+                    <div class="form-group">
+                        <p class="form-label">Autorises-tu la captation audio/vidéo ?</p>
+                        <div class="form-options-grid">
+                            <label class="form-option">
+                                <input type="radio" name="E1" value="oui" required>
+                                <span class="form-option-text">Oui</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="radio" name="E1" value="anonyme">
+                                <span class="form-option-text">Oui, anonymisée</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="radio" name="E1" value="non">
+                                <span class="form-option-text">Non</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- E2 -->
+                    <div class="form-group">
+                        <p class="form-label">Autorises-tu l'utilisation de citations ?</p>
+                        <div class="form-options-grid">
+                            <label class="form-option">
+                                <input type="radio" name="E2" value="attribuees" required>
+                                <span class="form-option-text">Oui, attribuées</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="radio" name="E2" value="anonymes">
+                                <span class="form-option-text">Oui, anonymes</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="radio" name="E2" value="non">
+                                <span class="form-option-text">Non</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="form-group" style="margin-top: var(--space-12);">
+                    <button type="submit" class="btn btn--primary" style="width: 100%;">
+                        Envoyer mes réponses
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Vue: Confirmation -->
+    <div data-view="confirmation" class="invite-page">
+        <div class="invite-content confirmation">
+            <h1 class="confirmation-title">Merci <span data-personalize="firstName"></span>.</h1>
+
+            <p class="confirmation-message">
+                Tes réponses ont bien été enregistrées.<br>
+                Tu pourras les modifier via ce lien si nécessaire.
+            </p>
+
+            <p class="text-secondary">
+                Nous reviendrons vers toi une fois le montage confirmé.
+            </p>
+
+            <div style="margin-top: var(--space-10);">
+                <button type="button" class="btn btn--ghost" onclick="showView('form')">
+                    Modifier mes réponses
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vue: Erreur -->
+    <div data-view="error" class="error-page">
+        <div class="error-content">
+            <h1 class="error-title">Lien invalide</h1>
+            <p class="error-message">Cette invitation n'existe pas ou a expiré.</p>
+            <div style="margin-top: var(--space-8);">
+                <a href="index.html" class="btn">Retour à l'accueil</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/invite.js"></script>
+</body>
+</html>

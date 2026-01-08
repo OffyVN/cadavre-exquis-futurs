@@ -1,0 +1,194 @@
+/* ============================================
+   Base Styles — Cadavre Exquis des Futurs
+   ============================================ */
+
+/* === Reset === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  min-height: 100vh;
+}
+
+/* === Typographie === */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--space-8);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-6);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-4);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-3);
+}
+
+p {
+  margin-bottom: var(--space-6);
+  max-width: 65ch;
+}
+
+/* Texte secondaire */
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+/* Emphase par graisse (pas par couleur ou italique) */
+strong, b {
+  font-weight: var(--font-weight-semibold);
+}
+
+em {
+  font-style: normal;
+  font-weight: var(--font-weight-medium);
+}
+
+/* === Liens === */
+
+a {
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent-light);
+}
+
+a:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+
+/* === Listes === */
+
+ul, ol {
+  margin-bottom: var(--space-6);
+  padding-left: var(--space-6);
+}
+
+li {
+  margin-bottom: var(--space-2);
+}
+
+li::marker {
+  color: var(--color-accent);
+}
+
+/* === Citations === */
+
+blockquote {
+  border-left: var(--border-width-thick) solid var(--color-accent);
+  padding-left: var(--space-6);
+  margin: var(--space-8) 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-lg);
+}
+
+/* === Images === */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* === Sélection === */
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-text-primary);
+}
+
+/* === Focus visible (accessibilité) === */
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+
+/* === Skip link (accessibilité) === */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  z-index: 9999;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: var(--space-4);
+}
+
+/* === Utilitaires === */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Réduction de mouvement si préféré */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

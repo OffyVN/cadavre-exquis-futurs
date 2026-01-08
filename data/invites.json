@@ -1,0 +1,182 @@
+{
+  "gregory-pouy": {
+    "firstName": "Grégory",
+    "lastName": "Pouy",
+    "formality": "tu",
+    "email": ""
+  },
+  "gilles-babinet": {
+    "firstName": "Gilles",
+    "lastName": "Babinet",
+    "formality": "vous",
+    "email": ""
+  },
+  "cedric-ringenbach": {
+    "firstName": "Cédric",
+    "lastName": "Ringenbach",
+    "formality": "tu",
+    "email": ""
+  },
+  "flore-vasseur": {
+    "firstName": "Flore",
+    "lastName": "Vasseur",
+    "formality": "tu",
+    "email": ""
+  },
+  "jean-pierre-goux": {
+    "firstName": "Jean-Pierre",
+    "lastName": "Goux",
+    "formality": "vous",
+    "email": ""
+  },
+  "matthieu-dardaillon": {
+    "firstName": "Matthieu",
+    "lastName": "Dardaillon",
+    "formality": "tu",
+    "email": ""
+  },
+  "thanh-nghiem": {
+    "firstName": "Thanh",
+    "lastName": "Nghiem",
+    "formality": "tu",
+    "email": ""
+  },
+  "matthieu-baudin": {
+    "firstName": "Matthieu",
+    "lastName": "Baudin",
+    "formality": "tu",
+    "email": ""
+  },
+  "pablo-servigne": {
+    "firstName": "Pablo",
+    "lastName": "Servigne",
+    "formality": "tu",
+    "email": ""
+  },
+  "maxime-blondeau": {
+    "firstName": "Maxime",
+    "lastName": "Blondeau",
+    "formality": "tu",
+    "email": ""
+  },
+  "sebastien-soriano": {
+    "firstName": "Sébastien",
+    "lastName": "Soriano",
+    "formality": "vous",
+    "email": ""
+  },
+  "alizee-lozachmeur": {
+    "firstName": "Alizée",
+    "lastName": "Lozach'meur",
+    "formality": "tu",
+    "email": ""
+  },
+  "pauline-magnat": {
+    "firstName": "Pauline",
+    "lastName": "Magnat",
+    "formality": "tu",
+    "email": ""
+  },
+  "frederic-laloux": {
+    "firstName": "Frédéric",
+    "lastName": "Laloux",
+    "formality": "vous",
+    "email": ""
+  },
+  "cedric-villani": {
+    "firstName": "Cédric",
+    "lastName": "Villani",
+    "formality": "vous",
+    "email": ""
+  },
+  "alice-barbe": {
+    "firstName": "Alice",
+    "lastName": "Barbe",
+    "formality": "tu",
+    "email": ""
+  },
+  "paul-duan": {
+    "firstName": "Paul",
+    "lastName": "Duan",
+    "formality": "tu",
+    "email": ""
+  },
+  "julien-devaureix": {
+    "firstName": "Julien",
+    "lastName": "Devaureix",
+    "formality": "tu",
+    "email": ""
+  },
+  "kat-borlongan": {
+    "firstName": "Kat",
+    "lastName": "Borlongan",
+    "formality": "tu",
+    "email": ""
+  },
+  "roxanne-varza": {
+    "firstName": "Roxanne",
+    "lastName": "Varza",
+    "formality": "tu",
+    "email": ""
+  },
+  "albert-moukheiber": {
+    "firstName": "Albert",
+    "lastName": "Moukheiber",
+    "formality": "tu",
+    "email": ""
+  },
+  "pierre-sermanet": {
+    "firstName": "Pierre",
+    "lastName": "Sermanet",
+    "formality": "tu",
+    "email": ""
+  },
+  "xavier-damman": {
+    "firstName": "Xavier",
+    "lastName": "Damman",
+    "formality": "tu",
+    "email": ""
+  },
+  "louise-browaeys": {
+    "firstName": "Louise",
+    "lastName": "Browaeys",
+    "formality": "tu",
+    "email": ""
+  },
+  "solenn-thomas": {
+    "firstName": "Solenn",
+    "lastName": "Thomas",
+    "formality": "tu",
+    "email": ""
+  },
+  "alexandre-jost": {
+    "firstName": "Alexandre",
+    "lastName": "Jost",
+    "formality": "tu",
+    "email": ""
+  },
+  "francois-taddei": {
+    "firstName": "François",
+    "lastName": "Taddéi",
+    "formality": "vous",
+    "email": ""
+  },
+  "emmanuelle-duez": {
+    "firstName": "Emmanuelle",
+    "lastName": "Duez",
+    "formality": "tu",
+    "email": ""
+  },
+  "yann-lechelle": {
+    "firstName": "Yann",
+    "lastName": "Lechelle",
+    "formality": "tu",
+    "email": ""
+  },
+  "david-djaiz": {
+    "firstName": "David",
+    "lastName": "Djaïz",
+    "formality": "tu",
+    "email": ""
+  }
+}

@@ -1,0 +1,258 @@
+/* ============================================
+   Pages Styles — Cadavre Exquis des Futurs
+   ============================================ */
+
+/* === Hero (Landing) === */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-16) var(--space-6);
+}
+
+.hero-content {
+  max-width: var(--max-width-content);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.1;
+  margin-bottom: var(--space-8);
+}
+
+.hero-title span {
+  display: block;
+}
+
+.hero-subtitle {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-8);
+  max-width: 50ch;
+}
+
+.hero-intro {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-10);
+  max-width: 60ch;
+}
+
+.hero-intro em {
+  font-style: italic;
+}
+
+/* === Bandeau festival === */
+
+.festival-banner {
+  padding: var(--space-4) var(--space-6);
+  background: var(--color-bg-secondary);
+  border-bottom: var(--border-width) solid var(--border-color);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.festival-banner a {
+  color: var(--color-text-primary);
+}
+
+.festival-banner-content {
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.festival-logo {
+  height: 32px;
+  width: auto;
+}
+
+/* === Section publique === */
+
+.public-section {
+  max-width: var(--max-width-content);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+/* === Phrase clé === */
+
+.key-phrase {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  margin-top: var(--space-10);
+  padding-top: var(--space-6);
+  border-top: var(--border-width) solid var(--border-color);
+  max-width: 45ch;
+}
+
+/* === Rôles de l'IA === */
+
+.role-list {
+  list-style: none;
+  padding: 0;
+  font-size: var(--font-size-lg);
+}
+
+.role-list li {
+  padding-left: var(--space-6);
+  position: relative;
+  margin-bottom: var(--space-3);
+}
+
+.role-list li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+.function-list {
+  margin-top: var(--space-8);
+  padding: var(--space-6);
+  background: var(--color-bg-secondary);
+}
+
+.function-list-title {
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+/* === Page Invitation === */
+
+.invite-page {
+  min-height: 100vh;
+  padding: var(--space-16) var(--space-6);
+}
+
+.invite-content {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+}
+
+.invite-greeting {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-8);
+}
+
+.invite-message {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-10);
+}
+
+.invite-info {
+  padding: var(--space-6);
+  background: var(--color-bg-secondary);
+  margin-bottom: var(--space-8);
+  font-size: var(--font-size-base);
+}
+
+/* === Formulaire d'invitation === */
+
+.invite-form {
+  padding-top: var(--space-8);
+}
+
+.invite-form-header {
+  margin-bottom: var(--space-12);
+  padding-bottom: var(--space-8);
+  border-bottom: var(--border-width) solid var(--border-color);
+}
+
+/* === Confirmation === */
+
+.confirmation {
+  text-align: left;
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+}
+
+.confirmation-title {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-6);
+}
+
+.confirmation-message {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-8);
+}
+
+/* === Erreur === */
+
+.error-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+}
+
+.error-content {
+  text-align: center;
+  max-width: var(--max-width-narrow);
+}
+
+.error-title {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-4);
+}
+
+.error-message {
+  color: var(--color-text-secondary);
+}
+
+/* === Vue states (pour invite.html) === */
+
+[data-view] {
+  display: none;
+}
+
+[data-view].active {
+  display: block;
+}
+
+/* === Responsive === */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: var(--space-20) var(--space-4);
+  }
+
+  .hero-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-lg);
+  }
+
+  .public-section {
+    padding: 0 var(--space-4);
+  }
+
+  .invite-greeting {
+    font-size: var(--font-size-2xl);
+  }
+
+  .festival-banner-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}

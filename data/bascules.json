@@ -1,0 +1,212 @@
+{
+  "bascules": [
+    {
+      "id": "A1-salariat",
+      "category": "A",
+      "categoryName": "Travail & statuts",
+      "text": "Le salariat devient minoritaire : moins d'1 actif sur 2 est en contrat de travail classique.",
+      "revealed": true
+    },
+    {
+      "id": "A2-cdi-critique",
+      "category": "A",
+      "categoryName": "Travail & statuts",
+      "text": "Le CDI est réservé à des fonctions \"critiques\" (santé, énergie, sécurité, infrastructures).",
+      "revealed": false
+    },
+    {
+      "id": "A3-metiers-dissous",
+      "category": "A",
+      "categoryName": "Travail & statuts",
+      "text": "Les \"métiers\" se dissolvent : la norme est un portefeuille de missions multi-collectifs/multi-employeurs.",
+      "revealed": false
+    },
+    {
+      "id": "A4-remuneration-scindee",
+      "category": "A",
+      "categoryName": "Travail & statuts",
+      "text": "La rémunération se scinde : revenu de base local + missions (le travail marchand ne suffit plus à structurer le revenu).",
+      "revealed": false
+    },
+    {
+      "id": "B1-personne-morale",
+      "category": "B",
+      "categoryName": "Entreprise & propriété",
+      "text": "La personne morale classique recule : une large part de l'activité passe par des structures à mission verrouillée (fondations, coopératives, fiducies d'usage).",
+      "revealed": true
+    },
+    {
+      "id": "B2-gouvernance-multipartite",
+      "category": "B",
+      "categoryName": "Entreprise & propriété",
+      "text": "Dans les organisations au-delà d'un seuil, la gouvernance devient multipartite obligatoire (salariés + usagers + territoire).",
+      "revealed": true
+    },
+    {
+      "id": "B3-droits-usage",
+      "category": "B",
+      "categoryName": "Entreprise & propriété",
+      "text": "La propriété \"absolue\" recule : on bascule vers des droits d'usage (logement, outils, véhicules) plutôt que possession.",
+      "revealed": false
+    },
+    {
+      "id": "B4-bilan-impact",
+      "category": "B",
+      "categoryName": "Entreprise & propriété",
+      "text": "Les grandes entreprises doivent publier un bilan d'impact opposable (sanctions juridiques si écart systémique).",
+      "revealed": false
+    },
+    {
+      "id": "C1-choc-filieres",
+      "category": "C",
+      "categoryName": "Territoires, production, agriculture",
+      "text": "Un choc de filières : 1 actif sur 10 travaille dans l'alimentation (production + transformation + logistique courte).",
+      "revealed": false
+    },
+    {
+      "id": "C2-quotas-carbone",
+      "category": "C",
+      "categoryName": "Territoires, production, agriculture",
+      "text": "Mise en place de quotas carbone individuels : certaines consommations lointaines deviennent de fait inaccessibles.",
+      "revealed": false
+    },
+    {
+      "id": "C3-transport-luxe",
+      "category": "C",
+      "categoryName": "Territoires, production, agriculture",
+      "text": "Le transport longue distance redevient un luxe : 80% des biens du quotidien sont produits à moins de 1 500 km.",
+      "revealed": false
+    },
+    {
+      "id": "C4-bioregions",
+      "category": "C",
+      "categoryName": "Territoires, production, agriculture",
+      "text": "Les territoires basculent en \"biorégions\" de fait : les bassins de vie (eau/énergie/alimentation) priment sur les découpages administratifs.",
+      "revealed": false
+    },
+    {
+      "id": "D1-passeport",
+      "category": "D",
+      "categoryName": "Identité, mobilité, frontières",
+      "text": "Le passeport n'est plus le pivot : l'accès aux droits passe d'abord par une identité numérique de confiance.",
+      "revealed": true
+    },
+    {
+      "id": "D2-citoyennete-multiple",
+      "category": "D",
+      "categoryName": "Identité, mobilité, frontières",
+      "text": "La citoyenneté devient multi-appartenance (ville + réseau + territoire), avec des droits/devoirs différenciés.",
+      "revealed": false
+    },
+    {
+      "id": "D3-frontieres-economiques",
+      "category": "D",
+      "categoryName": "Identité, mobilité, frontières",
+      "text": "Les frontières physiques tiennent, mais les frontières économiques explosent (taxe carbone, quotas, \"préférence régionale\").",
+      "revealed": false
+    },
+    {
+      "id": "D4-mobilite-rare",
+      "category": "D",
+      "categoryName": "Identité, mobilité, frontières",
+      "text": "La mobilité internationale se raréfie : le tourisme de masse devient socialement et économiquement marginal.",
+      "revealed": false
+    },
+    {
+      "id": "E1-populisme-securite",
+      "category": "E",
+      "categoryName": "Démocratie, polarisation, populisme",
+      "text": "Le populisme recule non par la pédagogie mais par une sécurité matérielle garantie (logement/soins/alimentation).",
+      "revealed": false
+    },
+    {
+      "id": "E2-jurys-citoyens",
+      "category": "E",
+      "categoryName": "Démocratie, polarisation, populisme",
+      "text": "Le vote \"tous les 5 ans\" est complété par des jurys citoyens permanents (délibération continue sur quelques sujets).",
+      "revealed": false
+    },
+    {
+      "id": "E3-partis-coalitions",
+      "category": "E",
+      "categoryName": "Démocratie, polarisation, populisme",
+      "text": "Les \"partis\" déclinent au profit de coalitions thématiques temporaires (campagnes-éclairs, mandats courts).",
+      "revealed": false
+    },
+    {
+      "id": "E4-polarisation-infrastructuree",
+      "category": "E",
+      "categoryName": "Démocratie, polarisation, populisme",
+      "text": "La polarisation devient \"infrastructurée\" : on vit dans des économies culturelles parallèles (médias, monnaies, écoles, soins).",
+      "revealed": false
+    },
+    {
+      "id": "F1-agents-ia",
+      "category": "F",
+      "categoryName": "IA, information, coordination",
+      "text": "Un tiers des tâches quotidiennes de coordination est délégué à des agents IA personnels (agenda, achats, démarches, négociation).",
+      "revealed": false
+    },
+    {
+      "id": "F2-droit-refus-ia",
+      "category": "F",
+      "categoryName": "IA, information, coordination",
+      "text": "Un droit nouveau apparaît : droit de refuser l'IA (services publics et entreprises doivent proposer une voie \"sans IA\").",
+      "revealed": true
+    },
+    {
+      "id": "F3-tracabilite-contenu",
+      "category": "F",
+      "categoryName": "IA, information, coordination",
+      "text": "La traçabilité devient obligatoire : tout contenu public a un label d'origine (humain/IA/mixte) vérifiable.",
+      "revealed": false
+    },
+    {
+      "id": "F4-management-auditable",
+      "category": "F",
+      "categoryName": "IA, information, coordination",
+      "text": "La coordination \"managériale\" devient un logiciel auditable : décisions et arbitrages doivent être explicables et contestables.",
+      "revealed": false
+    }
+  ],
+  "categories": [
+    { "id": "A", "name": "Travail & statuts" },
+    { "id": "B", "name": "Entreprise & propriété" },
+    { "id": "C", "name": "Territoires, production, agriculture" },
+    { "id": "D", "name": "Identité, mobilité, frontières" },
+    { "id": "E", "name": "Démocratie, polarisation, populisme" },
+    { "id": "F", "name": "IA, information, coordination" }
+  ],
+  "otherInvitees": [
+    "Grégory Pouy",
+    "Gilles Babinet",
+    "Cédric Ringenbach",
+    "Flore Vasseur",
+    "Jean-Pierre Goux",
+    "Matthieu Dardaillon",
+    "Thanh Nghiem",
+    "Matthieu Baudin",
+    "Pablo Servigne",
+    "Maxime Blondeau",
+    "Sébastien Soriano",
+    "Alizée Lozach'meur",
+    "Pauline Magnat",
+    "Frédéric Laloux",
+    "Cédric Villani",
+    "Alice Barbe",
+    "Paul Duan",
+    "Julien Devaureix",
+    "Kat Borlongan",
+    "Roxanne Varza",
+    "Albert Moukheiber",
+    "Pierre Sermanet",
+    "Xavier Damman",
+    "Louise Browaeys",
+    "Solenn Thomas",
+    "Alexandre Jost",
+    "François Taddéi",
+    "Emmanuelle Duez",
+    "Yann Lechelle",
+    "David Djaïz"
+  ]
+}
