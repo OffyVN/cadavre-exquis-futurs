@@ -2,6 +2,9 @@
 .DS_Store
 Thumbs.db
 
+# Original 2k card images (keep copies in assets/cards/)
+_*_2k_*.jpeg
+
 # IDE
 .vscode/
 .idea/
