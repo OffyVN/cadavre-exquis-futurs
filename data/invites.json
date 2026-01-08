@@ -178,5 +178,11 @@
     "lastName": "Djaïz",
     "formality": "tu",
     "email": ""
+  },
+  "benoit-louvel": {
+    "firstName": "Benoit",
+    "lastName": "Louvel",
+    "formality": "tu",
+    "email": "benoit.louvel@gmail.com"
   }
 }
