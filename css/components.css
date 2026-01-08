@@ -303,24 +303,38 @@
   border-left: var(--border-width) solid var(--border-color);
 }
 
-/* === Illustrations de section === */
+/* === Layout texte + illustration côte à côte === */
+
+.section-with-illustration {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-8);
+  align-items: start;
+}
 
 .section-illustration {
-  margin: var(--space-8) 0;
-  display: flex;
-  justify-content: center;
+  flex-shrink: 0;
 }
 
 .section-illustration img {
-  max-width: 280px;
+  max-width: 180px;
   width: 100%;
   height: auto;
-  opacity: 0.9;
 }
 
 @media (max-width: 768px) {
+  .section-with-illustration {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .section-illustration {
+    order: -1;
+    text-align: center;
+  }
+
   .section-illustration img {
-    max-width: 200px;
+    max-width: 140px;
   }
 }
 
@@ -345,11 +359,10 @@
 
 .card-item {
   position: relative;
-  aspect-ratio: 3 / 4;
-  overflow: hidden;
   border-radius: 4px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
+  overflow: hidden;
 }
 
 .card-item:hover {
@@ -363,8 +376,8 @@
 
 .card-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  display: block;
 }
 
 @media (max-width: 768px) {
