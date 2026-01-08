@@ -303,6 +303,27 @@
   border-left: var(--border-width) solid var(--border-color);
 }
 
+/* === Illustrations de section === */
+
+.section-illustration {
+  margin: var(--space-8) 0;
+  display: flex;
+  justify-content: center;
+}
+
+.section-illustration img {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .section-illustration img {
+    max-width: 200px;
+  }
+}
+
 /* === Galerie de cartes === */
 
 .cards-gallery {
