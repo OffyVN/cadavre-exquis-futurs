@@ -1,160 +1,156 @@
-# Narratif & cadre conceptuel
-## Cadavre Exquis des Futurs
+# Le Cadavre Exquis des Futurs
+
+## Une expérience de prospective vivante
+
+**6 esprits.  
+6 bascules.  
+4 heures.**
+
+Un futur qui se réécrit en direct.
+
+Une expérience publique où l’on ne débat pas de l’avenir —  
+**on le met en jeu.**
 
 ---
 
-## 0. Ancrage dans le festival
+## Un futur posé sur la table
 
-Le Cadavre Exquis des Futurs est un atelier du festival **L'Heure du Mouvement** (22-24 janvier 2026), organisé par Le 47.
+Sur la table, six cartes.
 
-### Lien avec le manifeste du festival
+Elles ne représentent pas des opinions.  
+Elles composent **un futur possible**.
 
-Le festival propose quatre appels : Donner, Dire, Ressentir, S'élancer.
+Un monde provisoire, cohérent, déjà là.  
+Un monde que l’on peut manipuler, transformer, fragiliser ou abandonner.
 
-Notre atelier répond à **"S'élancer — La puissance de futurs désirables"** :
-> "Canaliser notre élan collectif pour oser construire les futurs que nous désirons.
-> Nous explorons de nouveaux récits et affirmons notre puissance d'agir, même au cœur du chaos."
-
-Le Cadavre Exquis est un **mouvement d'idées** :
-- Les hypothèses circulent de main en main
-- Personne ne maîtrise l'ensemble
-- Le futur se fabrique par transmission imparfaite
-
-Référence : `L_Heure_du_Mouvement_Festival_des_Eco-Workers_du_47.pdf`
+Les invité·es ne viennent pas parler *du* futur.  
+Ils et elles viennent **agir sur un futur matérialisé**.
 
 ---
 
-## 1. Intention générale
+## De quoi s’agit-il ?
 
-Le Cadavre Exquis des Futurs est une tentative :
-- de sortir de la prospective abstraite,
-- de résister au débat d’opinions,
-- de rendre visibles les tensions réelles entre futurs possibles.
+*Le Cadavre Exquis des Futurs* est une œuvre conversationnelle vivante.
 
-Il s’agit d’un **dispositif de transmission**, pas de production de consensus.
+Des invité·es se relaient pour faire apparaître, déplacer ou retirer  
+des hypothèses radicales sur la société de demain :  
+travail, statuts, démocratie, pouvoir, mobilité, écologie…
 
----
-
-## 2. Pourquoi le “cadavre exquis”
-
-Le cadavre exquis est un jeu de création collective fondé sur :
-- l’héritage partiel,
-- la transformation,
-- la perte de contrôle.
-
-Appliqué au futur :
-- personne ne maîtrise l’ensemble,
-- chacun agit localement,
-- les conséquences dépassent les intentions.
+À chaque instant, les six cartes visibles forment un monde possible.  
+Ni vrai, ni faux.  
+Mais **habitable ou non**.
 
 ---
 
-## 3. Les cartes de rupture
+## Un jeu sérieux de prospective
 
-Une carte représente :
-- une bascule possible de la société,
-- ni une prédiction,
-- ni un souhait,
-- mais un point de tension.
+Il ne s’agit pas :
 
-Exemples :
-- Le salariat devient minoritaire
-- Le passeport cesse d’être central
-- Le droit de refuser l’IA devient fondamental
+- de prédire l’avenir,
+- de défendre des positions,
+- ni de chercher un consensus.
 
-Les cartes sont **vivantes** :
-- elles peuvent être défendues,
-- mises en crise,
-- détruites,
-- reformulées,
-- remplacées.
+Il s’agit de :
 
----
+- rendre visibles des futurs possibles,
+- éprouver ce qu’ils impliquent concrètement,
+- choisir — ensemble — ceux que nous voulons rendre désirables.
 
-## 4. Règle fondamentale du jeu
+Chaque carte ajoutée ouvre un monde.  
+Chaque carte retirée en ferme un autre.
 
-À tout moment :
-- 6 cartes sont sur la table.
-- Pas plus.
-- Pas moins.
-
-Chaque invité :
-1. hérite d’une carte
-2. en met une autre en crise
-3. en introduit une nouvelle
-
-Il n’existe pas de “bonne carte”.
+Penser le futur devient un acte situé,  
+chargé de conséquences.
 
 ---
 
-## 5. Temporalité
+## Le principe du cadavre exquis
 
-- L’événement dure 4 heures.
-- Un nouvel invité arrive toutes les 40 minutes.
-- Chaque invité reste 1 heure.
+Comme dans le cadavre exquis surréaliste,  
+le futur se construit à plusieurs,  
+sans qu’aucun·e ne le maîtrise entièrement.
 
-Structure :
-- 20 min : discussion à trois (héritage)
-- 20 min : tête-à-tête (mise en crise)
-- 20 min : discussion à trois (transmission)
+Les invité·es arrivent l’un·e après l’autre.  
+Chacun·e hérite d’un futur déjà transformé.
 
----
+Ils et elles doivent alors :
 
-## 6. Rôle de l’IA
+- assumer un héritage,
+- retirer une hypothèse,
+- en proposer une nouvelle,
+- puis transmettre le monde ainsi modifié.
 
-L’IA n’est pas experte.
-Elle n’a pas raison.
-Elle n’arbitre pas.
-
-Elle agit comme :
-- mémoire
-- miroir
-- perturbateur narratif
-
-Elle peut :
-- résumer
-- déformer
-- reformuler
-- produire un récit fictif du futur
-- révéler des angles morts
-
-Ses productions ne sont pas validées par les invités.
+Le futur se compose par ajouts et renoncements successifs.
 
 ---
 
-## 7. Place du public
+## Une scène, des corps, des choix
 
-Le public :
-- peut entrer et sortir librement
-- n’interrompt pas les invités
-- ne pose pas de questions directes
+Le dispositif est volontairement simple et contraint.
 
-Mais :
-- ses mots
-- ses émotions
-- ses tensions
-alimentent le dispositif (via collecte écrite).
+Un salon.  
+Une table.  
+Des cartes visibles de tous.
 
----
+Les corps comptent autant que les idées :
+- une chaise occupée,
+- une chaise vide,
+- une arrivée,
+- un départ.
 
-## 8. Éthique & sécurité
-
-- Les dissonances cognitives sont recherchée.
-- Les désaccords interpersonnels sont évités.
-- L’attaque personnelle est proscrite.
-- L’humiliation est exclue.
-- Le cadre est tenu fermement.
-
-Le jeu vise la **tension féconde**, pas la domination.
+Le public n’assiste pas à une discussion abstraite.  
+Il voit un futur **se transformer sous ses yeux**.
 
 ---
 
-## 9. Ce que l’expérience n’est pas
+## Le rôle de l’hôte
 
-- une conférence
-- un panel
-- un débat
-- un spectacle
-- une démonstration technologique
+L’hôte ne défend aucune vision particulière du futur.
 
-C’est une **œuvre conversationnelle vivante**.
+Il garantit le cadre :
+- le rythme,
+- la clarté,
+- l’exigence de pensée.
+
+Il veille à ce que l’on ne parle pas *sur* les cartes,  
+mais *à partir* d’elles.
+
+---
+
+## Ce que vit le public
+
+Le public n’est pas invité à juger.
+
+Il est invité à **prendre la mesure de la responsabilité de penser**.
+
+Voir un futur apparaître.  
+Voir un autre disparaître.  
+Comprendre que choisir, c’est renoncer.
+
+On ne sort pas avec des réponses.  
+On sort avec une conscience plus aiguë  
+des mondes que nos choix rendent possibles — ou impossibles.
+
+---
+
+## Une œuvre ouverte
+
+Le Cadavre Exquis des Futurs ne produit pas un scénario final.
+
+Il produit :
+- des tensions assumées,
+- des lignes de fracture visibles,
+- des futurs explicitement désirés ou refusés.
+
+C’est une œuvre de passage.
+
+Un espace où penser l’avenir redevient  
+un geste collectif, situé dans le présent,  
+et chargé de conséquences.
+
+---
+
+## Phrase boussole
+
+**Un futur possible est posé sur la table.  
+Il peut être manipulé. Transformé. Abandonné.**

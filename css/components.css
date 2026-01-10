@@ -1,23 +1,7 @@
 /* ============================================
    Components — Cadavre Exquis des Futurs
+   Thème chaleureux "au coin du feu"
    ============================================ */
-
-/* === Conteneurs === */
-
-.container {
-  width: 100%;
-  max-width: var(--max-width-content);
-  margin: 0 auto;
-  padding: 0 var(--space-6);
-}
-
-.container--narrow {
-  max-width: var(--max-width-narrow);
-}
-
-.container--wide {
-  max-width: var(--max-width-wide);
-}
 
 /* === Boutons === */
 
@@ -30,15 +14,22 @@
   text-decoration: none;
   padding: var(--space-4) var(--space-8);
   border: var(--border-width-thick) solid var(--color-accent);
+  border-radius: var(--border-radius-sm);
   background: transparent;
   color: var(--color-text-primary);
   cursor: pointer;
-  transition: background var(--transition-base), color var(--transition-base);
+  transition:
+    background var(--transition-base),
+    color var(--transition-base),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .btn:hover {
   background: var(--color-accent);
-  color: var(--color-text-primary);
+  color: var(--color-bg-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn:focus-visible {
@@ -46,22 +37,72 @@
   outline-offset: var(--focus-ring-offset);
 }
 
+/* Bouton principal - corail */
 .btn--primary {
-  background: var(--color-accent);
-  color: var(--color-text-primary);
+  background: var(--color-coral);
+  border-color: var(--color-coral);
+  color: var(--color-bg-white);
 }
 
 .btn--primary:hover {
-  background: var(--color-accent-light);
+  background: var(--color-coral-dark);
+  border-color: var(--color-coral-dark);
 }
 
+/* Bouton sauge */
+.btn--sage {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg-white);
+}
+
+.btn--sage:hover {
+  background: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+}
+
+/* Bouton ghost */
 .btn--ghost {
-  border-color: var(--color-text-secondary);
+  border-color: var(--border-color-strong);
+  color: var(--color-text-secondary);
 }
 
 .btn--ghost:hover {
   border-color: var(--color-text-primary);
+  color: var(--color-text-primary);
   background: transparent;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Bouton invitation - style chaleureux */
+.btn-invitation {
+  display: inline-block;
+  padding: var(--space-4) var(--space-10);
+  background: var(--color-coral);
+  color: var(--color-bg-white);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  border-radius: var(--border-radius-sm);
+  border: none;
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.btn-invitation:hover {
+  background: var(--color-coral-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-invitation:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
 }
 
 /* Groupe de boutons */
@@ -121,15 +162,17 @@
   font-family: var(--font-sans);
   font-size: var(--font-size-base);
   color: var(--color-text-primary);
-  background: transparent;
+  background: var(--color-bg-white);
   border: var(--border-width) solid var(--border-color-strong);
+  border-radius: var(--border-radius-sm);
   padding: var(--space-4);
-  transition: border-color var(--transition-fast);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .form-input:focus,
 .form-textarea:focus {
   border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(143, 163, 154, 0.15);
   outline: none;
 }
 
@@ -160,7 +203,7 @@
   height: 20px;
   min-width: 20px;
   border: var(--border-width-thick) solid var(--border-color-strong);
-  background: transparent;
+  background: var(--color-bg-white);
   cursor: pointer;
   margin-top: 2px;
   transition: border-color var(--transition-fast), background var(--transition-fast);
@@ -226,11 +269,15 @@
 /* === Sections de page === */
 
 .section {
-  padding: var(--space-24) 0;
+  padding: var(--section-padding-y) 0;
 }
 
 .section--alt {
   background: var(--color-bg-secondary);
+}
+
+.section--tertiary {
+  background: var(--color-bg-tertiary);
 }
 
 .section-title {
@@ -238,6 +285,14 @@
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-semibold);
   margin-bottom: var(--space-8);
+}
+
+.section-subtitle {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-xl);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-6);
+  font-weight: var(--font-weight-normal);
 }
 
 /* === Prose (blocs de texte) === */
@@ -255,7 +310,38 @@
   font-weight: var(--font-weight-semibold);
 }
 
-/* === Liste de règles === */
+/* Prose style serif - pour les citations */
+.prose-serif {
+  font-family: var(--font-serif);
+}
+
+/* === Liste de cadre (tirets) === */
+
+.cadre-list {
+  list-style: none;
+  padding: 0;
+}
+
+.cadre-list li {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-6);
+  padding-left: var(--space-8);
+  position: relative;
+}
+
+.cadre-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 12px;
+  height: 2px;
+  background: var(--color-accent);
+}
+
+/* === Liste de règles numérotées === */
 
 .rule-list {
   list-style: none;
@@ -280,30 +366,6 @@
   font-weight: var(--font-weight-bold);
   color: var(--color-accent);
   font-size: var(--font-size-xl);
-}
-
-/* === Liste de bascules === */
-
-.bascule-list {
-  list-style: none;
-  padding: 0;
-}
-
-.bascule-list li {
-  padding-left: var(--space-6);
-  position: relative;
-  margin-bottom: var(--space-4);
-  font-size: var(--font-size-lg);
-}
-
-.bascule-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.6em;
-  width: 8px;
-  height: 2px;
-  background: var(--color-accent);
 }
 
 /* === Note / Disclaimer === */
@@ -361,30 +423,29 @@
   font-size: var(--font-size-base);
   color: var(--color-text-secondary);
   margin-bottom: var(--space-6);
-  font-style: italic;
+  text-align: center;
 }
 
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-4);
+  gap: var(--space-6);
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .card-item {
   position: relative;
-  border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: var(--color-bg-white);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-card);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
   overflow: hidden;
 }
 
 .card-item:hover {
-  transform: translateY(-4px) rotate(-1deg);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-}
-
-.card-item:nth-child(even):hover {
-  transform: translateY(-4px) rotate(1deg);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 
 .card-item img {
@@ -393,50 +454,213 @@
   display: block;
 }
 
+/* Pile de cartes avec carte de réserve derrière */
+.card-stack {
+  position: relative;
+}
+
+.card-stack .card-reserve {
+  position: absolute;
+  inset: 0;
+  opacity: 0.4;
+  transform: translate(6px, 6px);
+  z-index: -1;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.card-stack .card-reserve img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-stack:hover .card-reserve {
+  opacity: 0.5;
+  transform: translate(8px, 8px);
+}
+
 @media (max-width: 768px) {
   .cards-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-3);
+    gap: var(--space-4);
   }
 }
 
 @media (max-width: 480px) {
   .cards-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-2);
+    grid-template-columns: 1fr;
+    max-width: 280px;
+    gap: var(--space-4);
   }
+}
 
-  .card-item {
-    border-radius: 2px;
+/* === Grille des phases === */
+
+.phases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.phase-card {
+  text-align: center;
+}
+
+.phase-illustration {
+  margin-bottom: var(--space-6);
+  padding: var(--space-4);
+  background: var(--color-bg-white);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.phase-illustration img {
+  width: 100%;
+  height: auto;
+}
+
+.phase-number {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+
+.phase-title {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-3);
+}
+
+.phase-description {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-base);
+}
+
+@media (max-width: 768px) {
+  .phases-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+    max-width: 400px;
+  }
+}
+
+/* === Section hôte (photo + texte) === */
+
+.hote-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.hote-text {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-relaxed);
+}
+
+.hote-text p {
+  margin-bottom: var(--space-4);
+}
+
+.hote-role {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-6);
+}
+
+.hote-photo {
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.hote-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hote-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  .hote-photo {
+    order: -1;
+    max-width: 300px;
+    margin: 0 auto;
   }
 }
 
 /* === Footer === */
 
 .footer {
-  padding: var(--space-12) 0;
-  border-top: var(--border-width) solid var(--border-color);
-}
-
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--space-6);
+  padding: var(--space-16) var(--space-6);
+  background: var(--color-bg-tertiary);
+  text-align: center;
 }
 
 .footer-logo {
-  height: 48px;
+  height: 40px;
   width: auto;
+  opacity: 0.7;
+  transition: opacity var(--transition-fast);
+}
+
+.footer-logo:hover {
+  opacity: 1;
 }
 
 .footer-text {
+  margin-top: var(--space-4);
   font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
+  color: var(--color-text-muted);
 }
 
-/* === Responsive === */
+.footer-phrase {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-base);
+  font-style: italic;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-8);
+  line-height: var(--line-height-relaxed);
+}
+
+.footer-mention {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-6);
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--color-text-primary);
+}
+
+.footer-link span {
+  font-size: var(--font-size-sm);
+  border-bottom: 1px solid currentColor;
+}
+
+/* === Responsive général === */
 
 @media (max-width: 768px) {
   h1 {
@@ -448,7 +672,7 @@
   }
 
   .section {
-    padding: var(--space-16) 0;
+    padding: var(--section-padding-y-mobile) 0;
   }
 
   .btn-group {

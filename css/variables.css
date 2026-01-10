@@ -1,32 +1,43 @@
 /* ============================================
    Design Tokens — Cadavre Exquis des Futurs
+   Palette chaleureuse "au coin du feu"
    ============================================ */
 
 :root {
-  /* === Couleurs === */
-  --color-bg-primary: #0B0B0B;
-  --color-bg-secondary: #141414;
-  --color-bg-tertiary: #1a1a1a;
+  /* === Couleurs - Palette chaude === */
+  --color-bg-primary: #F5F0E8;        /* Crème/ivoire - fond principal */
+  --color-bg-secondary: #EDE8DF;      /* Crème foncé - sections alternées */
+  --color-bg-tertiary: #E5DFD5;       /* Plus foncé - cards/highlights */
+  --color-bg-white: #FDFCFA;          /* Quasi-blanc pour contraste */
 
-  --color-text-primary: #F5F5F2;
-  --color-text-secondary: #8C8C8C;
-  --color-text-muted: #666666;
+  --color-text-primary: #1A1A1A;      /* Charbon foncé - texte principal */
+  --color-text-secondary: #4A4A4A;    /* Gris moyen - texte secondaire */
+  --color-text-muted: #7A7A7A;        /* Gris clair - légendes, hints */
 
-  --color-accent: #1F3A3D;
-  --color-accent-light: #2a4f54;
-  --color-accent-dark: #152a2c;
+  /* Accents du logo 47 */
+  --color-accent: #8fa39a;            /* Vert sauge - accent primaire */
+  --color-accent-light: #a3b5ad;      /* Sauge clair - hover */
+  --color-accent-dark: #7a8f86;       /* Sauge foncé - active */
 
-  /* Couleurs du logo 47 (pour référence) */
-  --color-47-sage: #8fa39a;
-  --color-47-coral: #e07a6b;
+  --color-coral: #e07a6b;             /* Corail - CTAs, accent secondaire */
+  --color-coral-light: #e8958a;       /* Corail clair - hover */
+  --color-coral-dark: #c96a5c;        /* Corail foncé - active */
+
+  /* Neutres chauds */
+  --color-warm-beige: #D4C8B8;        /* Touche papier/tissu */
+  --color-warm-brown: #8B7355;        /* Touche bois */
 
   /* États */
-  --color-error: #8B1E1E;
-  --color-success: #1F3A3D;
+  --color-error: #C54B4B;             /* Rouge chaud */
+  --color-success: #6B8F71;           /* Vert atténué */
+
+  /* Bordures */
+  --border-color: rgba(26, 26, 26, 0.1);
+  --border-color-strong: rgba(26, 26, 26, 0.2);
 
   /* === Typographie === */
-  --font-serif: 'IBM Plex Serif', 'Libre Baskerville', Georgia, serif;
-  --font-sans: 'Inter', 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'IBM Plex Serif', Georgia, 'Times New Roman', serif;
+  --font-sans: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
 
   /* Tailles */
   --font-size-xs: 0.75rem;      /* 12px */
@@ -45,10 +56,15 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  /* Hauteurs de ligne */
-  --line-height-tight: 1.2;
-  --line-height-base: 1.6;
-  --line-height-relaxed: 1.8;
+  /* Hauteurs de ligne - plus généreuses */
+  --line-height-tight: 1.25;
+  --line-height-base: 1.7;
+  --line-height-relaxed: 2.0;
+
+  /* Espacement lettres */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.02em;
 
   /* === Espacements (base 8px) === */
   --space-1: 0.25rem;   /* 4px */
@@ -65,6 +81,10 @@
   --space-24: 6rem;     /* 96px */
   --space-32: 8rem;     /* 128px */
 
+  /* Espacement sections */
+  --section-padding-y: 8rem;
+  --section-padding-y-mobile: 4rem;
+
   /* === Layout === */
   --max-width-narrow: 600px;
   --max-width-content: 720px;
@@ -74,16 +94,29 @@
   /* === Bordures === */
   --border-width: 1px;
   --border-width-thick: 2px;
-  --border-color: rgba(245, 245, 242, 0.15);
-  --border-color-strong: rgba(245, 245, 242, 0.3);
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
 
   /* === Transitions === */
-  --transition-fast: 150ms ease;
-  --transition-base: 250ms ease;
-  --transition-slow: 400ms ease;
+  --transition-fast: 200ms ease-out;
+  --transition-base: 400ms ease-out;
+  --transition-slow: 800ms ease-out;
+  --transition-glacial: 1200ms ease-out;
+
+  /* === Animations reveal au scroll === */
+  --reveal-distance: 30px;
+  --reveal-duration: 800ms;
+  --reveal-stagger: 150ms;
+
+  /* === Ombres (douces, chaudes) === */
+  --shadow-sm: 0 2px 8px rgba(139, 115, 85, 0.08);
+  --shadow-md: 0 4px 16px rgba(139, 115, 85, 0.1);
+  --shadow-lg: 0 8px 32px rgba(139, 115, 85, 0.12);
+  --shadow-card: 0 4px 20px rgba(139, 115, 85, 0.15);
 
   /* === Focus (accessibilité) === */
   --focus-ring-width: 2px;
-  --focus-ring-color: var(--color-accent-light);
+  --focus-ring-color: var(--color-accent);
   --focus-ring-offset: 3px;
 }
