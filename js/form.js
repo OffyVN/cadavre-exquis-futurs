@@ -12,12 +12,17 @@ let formData = {};
 let bascules = [];
 let otherInvitees = [];
 let currentToken = null;
+let currentInvitee = null;
+
+// Google Sheets webhook URL
+const GOOGLE_SHEETS_WEBHOOK = 'https://script.google.com/macros/s/AKfycbwd4OfYSf6nVOF7naWit_wNqgwksD0tkrgN-IWP4z7kTk6r6nP59J-2YQoEzD09XvCt/exec';
 
 /**
  * Initialise le formulaire
  */
-async function initForm(token) {
+async function initForm(token, invitee = null) {
     currentToken = token;
+    currentInvitee = invitee;
 
     // Charger les données
     await loadFormData();
@@ -425,7 +430,7 @@ function prefillForm(savedData) {
 /**
  * Gère la soumission du formulaire
  */
-function handleSubmit(e) {
+async function handleSubmit(e) {
     e.preventDefault();
 
     // Validation
@@ -435,12 +440,68 @@ function handleSubmit(e) {
         return;
     }
 
-    // Collecter et soumettre
+    // Collecter les données
     const data = collectFormData();
+
+    // Sauvegarder localement
     Storage.submitResponse(currentToken, data);
+
+    // Envoyer à Google Sheets
+    await sendToGoogleSheets(data);
 
     // Afficher la confirmation
     showView('confirmation');
+}
+
+/**
+ * Envoie les données à Google Sheets
+ */
+async function sendToGoogleSheets(formData) {
+    try {
+        const payload = {
+            token: currentToken,
+            firstName: currentInvitee?.firstName || '',
+            lastName: currentInvitee?.lastName || '',
+            A: {
+                interest: formData.A?.interest,
+                availability: formData.A?.timeSlots || [],
+                constraints: formData.A?.constraints
+            },
+            B: {
+                comfort: formData.B?.comfortItems || [],
+                feeling: formData.B?.overallFeeling,
+                vigilance: formData.B?.vigilancePoint
+            },
+            C: {
+                crossings: formData.C?.preferredCrossings || [],
+                avoidCrossing: formData.C?.avoidCrossing
+            },
+            D: {
+                selectedBascules: formData.D?.selectedBascules || [],
+                basculeReactions: formData.D?.basculeReactions || {},
+                proposedBascule: formData.D?.proposedBascule || {}
+            },
+            E: {
+                fluxChoice: formData.E?.fluxChoice,
+                tiersDesignation: formData.E?.tiersDesignation,
+                autreExplication: formData.E?.autreExplication
+            }
+        };
+
+        await fetch(GOOGLE_SHEETS_WEBHOOK, {
+            method: 'POST',
+            mode: 'no-cors', // Google Apps Script nécessite no-cors
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload)
+        });
+
+        console.log('Réponse envoyée à Google Sheets');
+    } catch (error) {
+        console.error('Erreur envoi Google Sheets:', error);
+        // On continue quand même - la sauvegarde locale est faite
+    }
 }
 
 /**

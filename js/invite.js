@@ -41,8 +41,8 @@ async function initInvitePage() {
         showView('landing');
     }
 
-    // Initialiser le formulaire
-    initForm(token);
+    // Initialiser le formulaire avec les infos de l'invité
+    initForm(token, invite);
 }
 
 /**
