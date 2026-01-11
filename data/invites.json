@@ -3,186 +3,217 @@
     "firstName": "Grégory",
     "lastName": "Pouy",
     "formality": "tu",
+    "gender": "M",
     "email": ""
   },
   "gilles-babinet": {
     "firstName": "Gilles",
     "lastName": "Babinet",
     "formality": "vous",
+    "gender": "M",
     "email": ""
   },
   "cedric-ringenbach": {
     "firstName": "Cédric",
     "lastName": "Ringenbach",
     "formality": "tu",
+    "gender": "M",
     "email": ""
   },
   "flore-vasseur": {
     "firstName": "Flore",
     "lastName": "Vasseur",
     "formality": "tu",
+    "gender": "F",
     "email": ""
   },
   "jean-pierre-goux": {
     "firstName": "Jean-Pierre",
     "lastName": "Goux",
     "formality": "vous",
+    "gender": "M",
     "email": ""
   },
   "matthieu-dardaillon": {
     "firstName": "Matthieu",
     "lastName": "Dardaillon",
     "formality": "tu",
+    "gender": "M",
     "email": ""
   },
   "thanh-nghiem": {
     "firstName": "Thanh",
     "lastName": "Nghiem",
     "formality": "tu",
+    "gender": "F",
     "email": ""
   },
   "matthieu-baudin": {
     "firstName": "Matthieu",
     "lastName": "Baudin",
     "formality": "tu",
+    "gender": "M",
     "email": ""
   },
   "pablo-servigne": {
     "firstName": "Pablo",
     "lastName": "Servigne",
     "formality": "tu",
+    "gender": "M",
     "email": ""
   },
   "maxime-blondeau": {
     "firstName": "Maxime",
     "lastName": "Blondeau",
     "formality": "tu",
+    "gender": "M",
     "email": ""
   },
   "sebastien-soriano": {
     "firstName": "Sébastien",
     "lastName": "Soriano",
     "formality": "vous",
+    "gender": "M",
     "email": ""
   },
   "alizee-lozachmeur": {
     "firstName": "Alizée",
     "lastName": "Lozach'meur",
     "formality": "tu",
+    "gender": "F",
     "email": ""
   },
   "pauline-magnat": {
     "firstName": "Pauline",
     "lastName": "Magnat",
     "formality": "tu",
+    "gender": "F",
     "email": ""
   },
   "frederic-laloux": {
     "firstName": "Frédéric",
     "lastName": "Laloux",
     "formality": "vous",
+    "gender": "M",
     "email": ""
   },
   "cedric-villani": {
     "firstName": "Cédric",
     "lastName": "Villani",
     "formality": "vous",
+    "gender": "M",
     "email": ""
   },
   "alice-barbe": {
     "firstName": "Alice",
     "lastName": "Barbe",
     "formality": "tu",
+    "gender": "F",
     "email": ""
   },
   "paul-duan": {
     "firstName": "Paul",
     "lastName": "Duan",
     "formality": "tu",
+    "gender": "M",
     "email": ""
   },
   "julien-devaureix": {
     "firstName": "Julien",
     "lastName": "Devaureix",
     "formality": "tu",
+    "gender": "M",
     "email": ""
   },
   "kat-borlongan": {
     "firstName": "Kat",
     "lastName": "Borlongan",
     "formality": "tu",
+    "gender": "F",
     "email": ""
   },
   "roxanne-varza": {
     "firstName": "Roxanne",
     "lastName": "Varza",
     "formality": "tu",
+    "gender": "F",
     "email": ""
   },
   "albert-moukheiber": {
     "firstName": "Albert",
     "lastName": "Moukheiber",
     "formality": "tu",
+    "gender": "M",
     "email": ""
   },
   "pierre-sermanet": {
     "firstName": "Pierre",
     "lastName": "Sermanet",
     "formality": "tu",
+    "gender": "M",
     "email": ""
   },
   "xavier-damman": {
     "firstName": "Xavier",
     "lastName": "Damman",
     "formality": "tu",
+    "gender": "M",
     "email": ""
   },
   "louise-browaeys": {
     "firstName": "Louise",
     "lastName": "Browaeys",
     "formality": "tu",
+    "gender": "F",
     "email": ""
   },
   "solenn-thomas": {
     "firstName": "Solenn",
     "lastName": "Thomas",
     "formality": "tu",
+    "gender": "F",
     "email": ""
   },
   "alexandre-jost": {
     "firstName": "Alexandre",
     "lastName": "Jost",
     "formality": "tu",
+    "gender": "M",
     "email": ""
   },
   "francois-taddei": {
     "firstName": "François",
     "lastName": "Taddéi",
     "formality": "vous",
+    "gender": "M",
     "email": ""
   },
   "emmanuelle-duez": {
     "firstName": "Emmanuelle",
     "lastName": "Duez",
     "formality": "tu",
+    "gender": "F",
     "email": ""
   },
   "yann-lechelle": {
     "firstName": "Yann",
     "lastName": "Lechelle",
     "formality": "tu",
+    "gender": "M",
     "email": ""
   },
   "david-djaiz": {
     "firstName": "David",
     "lastName": "Djaïz",
     "formality": "tu",
+    "gender": "M",
     "email": ""
   },
   "benoit-louvel": {
     "firstName": "Benoit",
     "lastName": "Louvel",
     "formality": "tu",
+    "gender": "M",
     "email": "benoit.louvel@gmail.com"
   }
 }

@@ -71,10 +71,10 @@ async function loadInviteData(token) {
  * Personnalise le contenu avec les données de l'invité
  */
 function personalizeContent(invite) {
-    // Greeting basé sur la formalité
-    const greeting = invite.formality === 'tu'
-        ? `Salut ${invite.firstName},`
-        : `Cher·e ${invite.firstName},`;
+    // Greeting basé sur le genre
+    const greeting = invite.gender === 'F'
+        ? `Chère ${invite.firstName},`
+        : `Cher ${invite.firstName},`;
 
     document.querySelectorAll('[data-personalize="greeting"]').forEach(el => {
         el.textContent = greeting;
@@ -84,10 +84,47 @@ function personalizeContent(invite) {
         el.textContent = invite.firstName;
     });
 
+    // Adapter les accords selon le genre
+    adaptTextToGender(invite.gender);
+
     // Adapter le texte tu/vous dans le message
     if (invite.formality === 'vous') {
         adaptTextToVous();
     }
+}
+
+/**
+ * Adapte les textes selon le genre (supprime l'écriture inclusive)
+ */
+function adaptTextToGender(gender) {
+    const isFemale = gender === 'F';
+
+    // Mapping des accords
+    const replacements = isFemale ? {
+        'partant·e': 'partante',
+        'curieux·se': 'curieuse',
+        'réservé·e': 'réservée',
+        'invité·e': 'invitée',
+        'accueilli·e': 'accueillie',
+        'jugé·e': 'jugée'
+    } : {
+        'partant·e': 'partant',
+        'curieux·se': 'curieux',
+        'réservé·e': 'réservé',
+        'invité·e': 'invité',
+        'accueilli·e': 'accueilli',
+        'jugé·e': 'jugé'
+    };
+
+    // Appliquer les remplacements sur tous les textes du formulaire
+    const elements = document.querySelectorAll('.form-option-text, .form-label, .invite-message p');
+    elements.forEach(el => {
+        let html = el.innerHTML;
+        for (const [inclusive, gendered] of Object.entries(replacements)) {
+            html = html.replace(new RegExp(inclusive, 'g'), gendered);
+        }
+        el.innerHTML = html;
+    });
 }
 
 /**

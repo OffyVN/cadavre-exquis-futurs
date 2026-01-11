@@ -57,6 +57,19 @@ Objectif : mise en posture intellectuelle
 ### E — Consentements
 Objectif : clarté & respect
 
+### F — Flux financiers
+Objectif : anticiper la redistribution de valeur
+
+Question : "Dans l'éventualité où des flux financiers te seraient proposés, que souhaiterais-tu en faire ?"
+
+Options :
+1. Les offrir au 47 pour sa pérennité
+2. Les recevoir pour honorer la gratitude exprimée
+3. Qu'ils soient remis à une personne/association (champ conditionnel)
+4. Autre (champ conditionnel)
+
+Note : NB indiquant qu'on parle de moins de 100 €.
+
 ---
 
 ## 5. Données sensibles

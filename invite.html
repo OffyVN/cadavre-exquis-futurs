@@ -25,11 +25,12 @@
             <p class="invite-greeting" data-personalize="greeting"></p>
 
             <div class="invite-message">
-                <p>Je t'écris pour te proposer un format très particulier,
-                à la frontière entre conversation, œuvre collective et prospective.</p>
+                <p>Merci pour ton intérêt dans cette expérience. J'espère que tu pourras aller au bout avec moi !</p>
 
-                <p>Avant d'aller plus loin, j'aimerais savoir si ce jeu pourrait t'intéresser
-                et si les contraintes logistiques sont compatibles de ton côté.</p>
+                <p>Le délai est court, le format est exploratoire, et j'ai une certaine confiance dans le destin
+                et une appétence pour la transparence : je vais proposer à 30 personnes dans l'espoir que
+                naturellement émergera un groupe de 6 qui se choisiront mutuellement, seront disponibles
+                le même jour, et seront assez diversifiés pour apporter une richesse de points de vue.</p>
             </div>
 
             <div class="invite-info">
@@ -273,6 +274,53 @@
                                 <span class="form-option-text">Non</span>
                             </label>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Section F: Flux financiers -->
+                <div class="form-section">
+                    <h3 class="form-section-title">F. Flux financiers</h3>
+
+                    <p class="form-section-intro">
+                        Le festival est en participation consciente, il n'y a pas d'engagement financier ferme
+                        pour ta participation (comme pour à peu près tout le reste) mais cela ne signifie pas
+                        qu'on ne la valorise pas.
+                    </p>
+
+                    <!-- F1 -->
+                    <div class="form-group">
+                        <p class="form-label">Dans l'éventualité où des flux financiers te seraient proposés, que souhaiterais-tu en faire ?</p>
+                        <div class="form-options-grid">
+                            <label class="form-option">
+                                <input type="radio" name="F1" value="47">
+                                <span class="form-option-text">Les offrir au 47 pour sa pérennité (et peut-être pour des services qu'il m'a rendu ou va me rendre)</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="radio" name="F1" value="recevoir">
+                                <span class="form-option-text">Les recevoir pour honorer la gratitude qui m'est exprimée</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="radio" name="F1" value="tiers">
+                                <span class="form-option-text">Qu'ils soient remis à une personne qui m'a touché ou une association qui me tient à cœur</span>
+                            </label>
+                            <label class="form-option">
+                                <input type="radio" name="F1" value="autre">
+                                <span class="form-option-text">Autre</span>
+                            </label>
+                        </div>
+                        <p class="form-hint" style="margin-top: var(--space-3);">NB : On parle sans doute de moins de 100 €.</p>
+                    </div>
+
+                    <!-- F2: Champ conditionnel pour "tiers" -->
+                    <div class="form-group" id="F2-group" style="display: none;">
+                        <label class="form-label" for="F2">Précise la personne ou l'association</label>
+                        <input type="text" id="F2" name="F2" class="form-input" placeholder="Nom de la personne ou de l'association">
+                    </div>
+
+                    <!-- F3: Champ conditionnel pour "autre" -->
+                    <div class="form-group" id="F3-group" style="display: none;">
+                        <label class="form-label" for="F3">Précise</label>
+                        <input type="text" id="F3" name="F3" class="form-input" placeholder="Ta préférence">
                     </div>
                 </div>
 

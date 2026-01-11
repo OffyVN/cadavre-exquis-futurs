@@ -209,6 +209,9 @@ function setupFormListeners() {
         });
     }
 
+    // F1 → F2/F3 conditionnels
+    setupSectionFListeners();
+
     // Auto-save sur tous les champs
     form.querySelectorAll('input, textarea').forEach(input => {
         input.addEventListener('change', autoSave);
@@ -219,6 +222,31 @@ function setupFormListeners() {
 
     // Soumission
     form.addEventListener('submit', handleSubmit);
+}
+
+/**
+ * Configure les listeners pour la section F (champs conditionnels)
+ */
+function setupSectionFListeners() {
+    const f1Radios = document.querySelectorAll('input[name="F1"]');
+    const f2Group = document.getElementById('F2-group');
+    const f3Group = document.getElementById('F3-group');
+
+    if (!f1Radios.length || !f2Group || !f3Group) return;
+
+    f1Radios.forEach(radio => {
+        radio.addEventListener('change', () => {
+            const value = document.querySelector('input[name="F1"]:checked')?.value;
+
+            // Afficher F2 si "tiers" sélectionné
+            f2Group.style.display = value === 'tiers' ? 'block' : 'none';
+
+            // Afficher F3 si "autre" sélectionné
+            f3Group.style.display = value === 'autre' ? 'block' : 'none';
+
+            autoSave();
+        });
+    });
 }
 
 /**
@@ -262,6 +290,11 @@ function collectFormData() {
         E: {
             captureConsent: form.querySelector('input[name="E1"]:checked')?.value || null,
             citationConsent: form.querySelector('input[name="E2"]:checked')?.value || null
+        },
+        F: {
+            fluxChoice: form.querySelector('input[name="F1"]:checked')?.value || null,
+            tiersDesignation: form.querySelector('#F2')?.value || '',
+            autreExplication: form.querySelector('#F3')?.value || ''
         }
     };
 
@@ -361,6 +394,30 @@ function prefillForm(savedData) {
         if (savedData.E.citationConsent) {
             const radio = form.querySelector(`input[name="E2"][value="${savedData.E.citationConsent}"]`);
             if (radio) radio.checked = true;
+        }
+    }
+
+    // Section F
+    if (savedData.F) {
+        if (savedData.F.fluxChoice) {
+            const radio = form.querySelector(`input[name="F1"][value="${savedData.F.fluxChoice}"]`);
+            if (radio) {
+                radio.checked = true;
+                // Afficher les champs conditionnels si nécessaire
+                if (savedData.F.fluxChoice === 'tiers') {
+                    document.getElementById('F2-group').style.display = 'block';
+                } else if (savedData.F.fluxChoice === 'autre') {
+                    document.getElementById('F3-group').style.display = 'block';
+                }
+            }
+        }
+        if (savedData.F.tiersDesignation) {
+            const f2 = form.querySelector('#F2');
+            if (f2) f2.value = savedData.F.tiersDesignation;
+        }
+        if (savedData.F.autreExplication) {
+            const f3 = form.querySelector('#F3');
+            if (f3) f3.value = savedData.F.autreExplication;
         }
     }
 }
