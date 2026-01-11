@@ -5,7 +5,8 @@
       "category": "A",
       "categoryName": "Travail & statuts",
       "text": "Le salariat devient minoritaire : moins d'1 actif sur 2 est en contrat de travail classique.",
-      "revealed": true
+      "revealed": true,
+      "image": "assets/cards/CarteA1.png"
     },
     {
       "id": "A2-cdi-critique",
@@ -33,14 +34,15 @@
       "category": "B",
       "categoryName": "Entreprise & propriété",
       "text": "La personne morale classique recule : une large part de l'activité passe par des structures à mission verrouillée (fondations, coopératives, fiducies d'usage).",
-      "revealed": true
+      "revealed": false
     },
     {
       "id": "B2-gouvernance-multipartite",
       "category": "B",
       "categoryName": "Entreprise & propriété",
       "text": "Dans les organisations au-delà d'un seuil, la gouvernance devient multipartite obligatoire (salariés + usagers + territoire).",
-      "revealed": true
+      "revealed": true,
+      "image": "assets/cards/CarteB2.png"
     },
     {
       "id": "B3-droits-usage",
@@ -68,7 +70,8 @@
       "category": "C",
       "categoryName": "Territoires, production, agriculture",
       "text": "Mise en place de quotas carbone individuels : certaines consommations lointaines deviennent de fait inaccessibles.",
-      "revealed": false
+      "revealed": true,
+      "image": "assets/cards/CarteC2.png"
     },
     {
       "id": "C3-transport-luxe",
@@ -89,7 +92,8 @@
       "category": "D",
       "categoryName": "Identité, mobilité, frontières",
       "text": "Le passeport n'est plus le pivot : l'accès aux droits passe d'abord par une identité numérique de confiance.",
-      "revealed": true
+      "revealed": true,
+      "image": "assets/cards/CarteD1.png"
     },
     {
       "id": "D2-citoyennete-multiple",
@@ -124,7 +128,8 @@
       "category": "E",
       "categoryName": "Démocratie, polarisation, populisme",
       "text": "Le vote \"tous les 5 ans\" est complété par des jurys citoyens permanents (délibération continue sur quelques sujets).",
-      "revealed": false
+      "revealed": true,
+      "image": "assets/cards/CarteE2.png"
     },
     {
       "id": "E3-partis-coalitions",
@@ -152,7 +157,8 @@
       "category": "F",
       "categoryName": "IA, information, coordination",
       "text": "Un droit nouveau apparaît : droit de refuser l'IA (services publics et entreprises doivent proposer une voie \"sans IA\").",
-      "revealed": true
+      "revealed": true,
+      "image": "assets/cards/CarteF2.png"
     },
     {
       "id": "F3-tracabilite-contenu",

@@ -2,9 +2,9 @@
 
 ## Une expérience de prospective vivante
 
-**6 esprits.  
+6 esprits.  
 6 bascules.  
-4 heures.**
+4 heures.
 
 Un futur qui se réécrit en direct.
 

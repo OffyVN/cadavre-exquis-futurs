@@ -234,6 +234,77 @@
   margin-bottom: var(--space-6);
 }
 
+/* Matrice de cartes bascules (formulaire D1) */
+.bascule-cards-matrix {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  max-width: 600px;
+}
+
+@media (max-width: 480px) {
+  .bascule-cards-matrix {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.bascule-card {
+  position: relative;
+  cursor: pointer;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.bascule-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity var(--transition-fast);
+}
+
+.bascule-card:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-md);
+}
+
+.bascule-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(143, 163, 154, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.bascule-card-check {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.bascule-card--selected .bascule-card-overlay {
+  opacity: 1;
+}
+
+.bascule-card--selected {
+  box-shadow: 0 0 0 3px var(--color-accent);
+}
+
+/* Animation shake quand max atteint */
+@keyframes card-shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+.bascule-card--shake {
+  animation: card-shake 0.4s ease-in-out;
+}
+
 /* Radio et Checkbox */
 .form-option {
   display: flex;

@@ -59,48 +59,50 @@ async function loadFormData() {
 }
 
 /**
- * Affiche les bascules (section D1) — uniquement les "revealed"
+ * Affiche les bascules (section D1) — uniquement les "revealed" en matrice de cartes
  */
 function renderBascules() {
     const container = document.getElementById('bascules-list');
     if (!container) return;
 
-    // Filtrer uniquement les bascules révélées
-    const revealedBascules = bascules.filter(b => b.revealed);
+    // Filtrer uniquement les bascules révélées (avec image)
+    const revealedBascules = bascules.filter(b => b.revealed && b.image);
 
-    // Grouper par catégorie
-    const byCategory = {};
-    revealedBascules.forEach(b => {
-        if (!byCategory[b.category]) {
-            byCategory[b.category] = {
-                name: b.categoryName,
-                items: []
-            };
-        }
-        byCategory[b.category].items.push(b);
-    });
-
-    // Générer le HTML par catégorie
+    // Générer le HTML en matrice 2x3
     let html = '';
-    Object.keys(byCategory).sort().forEach(catId => {
-        const cat = byCategory[catId];
-        html += `<div class="bascule-category" style="margin-bottom: var(--space-6);">
-            <p class="form-hint" style="margin-bottom: var(--space-2); text-transform: uppercase; letter-spacing: 0.05em;">${cat.name}</p>`;
-        cat.items.forEach(b => {
-            html += `
-            <label class="form-option">
-                <input type="checkbox" name="D1" value="${b.id}" data-text="${b.text}">
-                <span class="form-option-text">${b.text}</span>
-            </label>`;
-        });
-        html += '</div>';
+    revealedBascules.forEach(b => {
+        html += `
+        <div class="bascule-card" data-id="${b.id}" data-text="${b.text}" title="${b.text}">
+            <input type="checkbox" name="D1" value="${b.id}" data-text="${b.text}" style="display: none;">
+            <img src="${b.image}" alt="${b.categoryName}">
+            <div class="bascule-card-overlay">
+                <span class="bascule-card-check">✓</span>
+            </div>
+        </div>`;
     });
 
     container.innerHTML = html;
 
-    // Ajouter listeners pour max 3 sélections
-    container.querySelectorAll('input[name="D1"]').forEach(input => {
-        input.addEventListener('change', handleBasculeSelection);
+    // Ajouter listeners pour sélection par clic sur carte
+    container.querySelectorAll('.bascule-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const checkbox = card.querySelector('input[name="D1"]');
+            const checkedCount = container.querySelectorAll('input[name="D1"]:checked').length;
+
+            // Si déjà 3 sélectionnées et on essaie d'en ajouter une autre
+            if (!checkbox.checked && checkedCount >= 3) {
+                // Faire clignoter la carte et ne pas sélectionner
+                card.classList.add('bascule-card--shake');
+                setTimeout(() => card.classList.remove('bascule-card--shake'), 500);
+                return;
+            }
+
+            // Toggle la sélection
+            checkbox.checked = !checkbox.checked;
+            card.classList.toggle('bascule-card--selected', checkbox.checked);
+
+            handleBasculeSelection();
+        });
     });
 }
 
@@ -357,6 +359,9 @@ function prefillForm(savedData) {
             const cb = form.querySelector(`input[name="D1"][value="${id}"]`);
             if (cb) {
                 cb.checked = true;
+                // Ajouter la classe de sélection à la carte parente
+                const card = cb.closest('.bascule-card');
+                if (card) card.classList.add('bascule-card--selected');
             }
         });
         // Déclencher la mise à jour des réactions
