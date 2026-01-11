@@ -43,7 +43,7 @@ Le site révèle
 ## 4. Sections du formulaire
 
 ### TITRE
-Quand l'utilisateur clique "Répondre au formulaire", il est emmené vers une nouvelle page avec le formulaire qui est intitulée "Cher XXXX" => Il faut changer le titre en "Si je devais jouer ce jeu..." et ajouter en sous titre : "Sur la base des réponses j'espère très fort arriver à assembler une équipe ! Mais sinon tant pis, ça sera pour une prochaine fois !"
+Quand l'utilisateur clique "Répondre au formulaire", il est emmené vers une nouvelle page avec le formulaire qui est intitulée "Cher XXXX" => Il faut changer le titre en ""Si je devais jouer ce jeu..."" (avec des guillemets) et ajouter en sous titre : "Sur la base des réponses j'espère très fort arriver à assembler une équipe ! Mais sinon tant pis, ça sera pour une prochaine fois !"
 
 ### A — Disponibilité
 Objectif : faisabilité

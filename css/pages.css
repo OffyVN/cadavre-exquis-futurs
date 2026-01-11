@@ -74,6 +74,8 @@
   letter-spacing: 0.1em;
   margin-bottom: var(--space-4);
   text-align: center;
+  display: block;
+  width: 100%;
 }
 
 .hero-baseline {
