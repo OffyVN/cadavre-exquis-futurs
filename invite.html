@@ -48,8 +48,8 @@
     <div data-view="form" class="invite-page">
         <div class="invite-content" style="max-width: var(--max-width-content);">
             <div class="invite-form-header">
-                <p class="invite-greeting" data-personalize="greeting"></p>
-                <p class="text-secondary">Formulaire de pré-inscription</p>
+                <h1 class="form-main-title">Si je devais jouer ce jeu...</h1>
+                <p class="form-main-subtitle">Sur la base des réponses j'espère très fort arriver à assembler une équipe ! Mais sinon tant pis, ça sera pour une prochaine fois !</p>
             </div>
 
             <form id="invite-form" class="invite-form">
@@ -79,7 +79,7 @@
                     <!-- A2 -->
                     <div class="form-group">
                         <p class="form-label">Créneaux possibles</p>
-                        <p class="form-hint">Plusieurs choix possibles</p>
+                        <p class="form-hint">Plusieurs choix possibles, sachant que ton intervention sera à caler sur une durée de une heure dans la zone en question. Et que je vais autant que possible privilégier les plans A et B, mais on ne sait jamais je laisse les autres créneaux ouverts.</p>
                         <div class="form-options-grid" style="margin-top: var(--space-3);">
                             <label class="form-option">
                                 <input type="checkbox" name="A2" value="vendredi-pm">
@@ -219,67 +219,46 @@
                         </div>
                     </div>
 
-                    <!-- D3 -->
+                    <!-- D2: Proposition de bascule -->
                     <div class="form-group" style="margin-top: var(--space-8);">
-                        <label class="form-label" for="D3">Si tu le souhaites, propose une bascule</label>
-                        <input type="text" id="D3" name="D3" class="form-input" placeholder="En 2036, …">
-                    </div>
+                        <p class="form-label">Si tu le souhaites, propose une bascule</p>
+                        <p class="form-hint">Aucun de ces champs n'est obligatoire</p>
 
-                    <!-- D4 -->
-                    <div class="form-group" id="D4-group" style="display: none;">
-                        <label class="form-option">
-                            <input type="checkbox" name="D4" value="consent" id="D4">
-                            <span class="form-option-text">J'accepte que cette proposition soit reformulée ou détruite sans attribution</span>
-                        </label>
-                    </div>
-                </div>
+                        <div class="proposal-fields" style="margin-top: var(--space-4);">
+                            <div class="form-group">
+                                <label class="form-label form-label--secondary" for="D2-category">Catégorie</label>
+                                <select id="D2-category" name="D2-category" class="form-select">
+                                    <option value="">— Choisir une catégorie —</option>
+                                    <option value="A">Travail & statuts</option>
+                                    <option value="B">Entreprise & propriété</option>
+                                    <option value="C">Territoires, production, agriculture</option>
+                                    <option value="D">Identité, mobilité, frontières</option>
+                                    <option value="E">Démocratie, polarisation, populisme</option>
+                                    <option value="F">IA, information, coordination</option>
+                                </select>
+                            </div>
 
-                <!-- Section E: Consentements -->
-                <div class="form-section">
-                    <h3 class="form-section-title">E. Consentements</h3>
+                            <div class="form-group">
+                                <label class="form-label form-label--secondary" for="D2-title">Titre</label>
+                                <input type="text" id="D2-title" name="D2-title" class="form-input" placeholder="Ex : Quotas carbone individuels">
+                            </div>
 
-                    <!-- E1 -->
-                    <div class="form-group">
-                        <p class="form-label">Autorises-tu la captation audio/vidéo ?</p>
-                        <div class="form-options-grid">
-                            <label class="form-option">
-                                <input type="radio" name="E1" value="oui" required>
-                                <span class="form-option-text">Oui</span>
-                            </label>
-                            <label class="form-option">
-                                <input type="radio" name="E1" value="anonyme">
-                                <span class="form-option-text">Oui, anonymisée</span>
-                            </label>
-                            <label class="form-option">
-                                <input type="radio" name="E1" value="non">
-                                <span class="form-option-text">Non</span>
-                            </label>
-                        </div>
-                    </div>
+                            <div class="form-group">
+                                <label class="form-label form-label--secondary" for="D2-concept">Description conceptuelle</label>
+                                <textarea id="D2-concept" name="D2-concept" class="form-textarea" placeholder="Ex : Les consommations de tous les citoyens sont mesurées"></textarea>
+                            </div>
 
-                    <!-- E2 -->
-                    <div class="form-group">
-                        <p class="form-label">Autorises-tu l'utilisation de citations ?</p>
-                        <div class="form-options-grid">
-                            <label class="form-option">
-                                <input type="radio" name="E2" value="attribuees" required>
-                                <span class="form-option-text">Oui, attribuées</span>
-                            </label>
-                            <label class="form-option">
-                                <input type="radio" name="E2" value="anonymes">
-                                <span class="form-option-text">Oui, anonymes</span>
-                            </label>
-                            <label class="form-option">
-                                <input type="radio" name="E2" value="non">
-                                <span class="form-option-text">Non</span>
-                            </label>
+                            <div class="form-group">
+                                <label class="form-label form-label--secondary" for="D2-narrative">Description narrative</label>
+                                <textarea id="D2-narrative" name="D2-narrative" class="form-textarea" placeholder="Ex : Votre fille de 25 ans n'a jamais quitté l'Europe et mange du chocolat 1 fois par an. Elle trouve ça normal."></textarea>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Section F: Flux financiers -->
+                <!-- Section E: Flux financiers -->
                 <div class="form-section">
-                    <h3 class="form-section-title">F. Flux financiers</h3>
+                    <h3 class="form-section-title">E. Flux financiers</h3>
 
                     <p class="form-section-intro">
                         Le festival est en participation consciente, il n'y a pas d'engagement financier ferme
@@ -292,19 +271,19 @@
                         <p class="form-label">Dans l'éventualité où des flux financiers te seraient proposés, que souhaiterais-tu en faire ?</p>
                         <div class="form-options-grid">
                             <label class="form-option">
-                                <input type="radio" name="F1" value="47">
+                                <input type="radio" name="E1" value="47">
                                 <span class="form-option-text">Les offrir au 47 pour sa pérennité (et peut-être pour des services qu'il m'a rendu ou va me rendre)</span>
                             </label>
                             <label class="form-option">
-                                <input type="radio" name="F1" value="recevoir">
+                                <input type="radio" name="E1" value="recevoir">
                                 <span class="form-option-text">Les recevoir pour honorer la gratitude qui m'est exprimée</span>
                             </label>
                             <label class="form-option">
-                                <input type="radio" name="F1" value="tiers">
+                                <input type="radio" name="E1" value="tiers">
                                 <span class="form-option-text">Qu'ils soient remis à une personne qui m'a touché ou une association qui me tient à cœur</span>
                             </label>
                             <label class="form-option">
-                                <input type="radio" name="F1" value="autre">
+                                <input type="radio" name="E1" value="autre">
                                 <span class="form-option-text">Autre</span>
                             </label>
                         </div>
@@ -312,15 +291,15 @@
                     </div>
 
                     <!-- F2: Champ conditionnel pour "tiers" -->
-                    <div class="form-group" id="F2-group" style="display: none;">
-                        <label class="form-label" for="F2">Précise la personne ou l'association</label>
-                        <input type="text" id="F2" name="F2" class="form-input" placeholder="Nom de la personne ou de l'association">
+                    <div class="form-group" id="E2-group" style="display: none;">
+                        <label class="form-label" for="E2">Précise la personne ou l'association</label>
+                        <input type="text" id="E2" name="E2" class="form-input" placeholder="Nom de la personne ou de l'association">
                     </div>
 
                     <!-- F3: Champ conditionnel pour "autre" -->
-                    <div class="form-group" id="F3-group" style="display: none;">
-                        <label class="form-label" for="F3">Précise</label>
-                        <input type="text" id="F3" name="F3" class="form-input" placeholder="Ta préférence">
+                    <div class="form-group" id="E3-group" style="display: none;">
+                        <label class="form-label" for="E3">Précise</label>
+                        <input type="text" id="E3" name="E3" class="form-input" placeholder="Ta préférence">
                     </div>
                 </div>
 
@@ -344,8 +323,12 @@
                 Tu pourras les modifier via ce lien si nécessaire.
             </p>
 
-            <p class="text-secondary">
-                Nous reviendrons vers toi une fois le montage confirmé.
+            <p class="text-secondary" style="margin-top: var(--space-6);">
+                Je reviendrai vers toi dans tous les cas, et je l'espère pour t'annoncer qu'on a trouvé une combinaison gagnante !
+            </p>
+
+            <p class="confirmation-signature" style="margin-top: var(--space-4); font-style: italic;">
+                — Duc
             </p>
 
             <div style="margin-top: var(--space-10);">

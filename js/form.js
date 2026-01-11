@@ -1,6 +1,11 @@
 /**
  * Cadavre Exquis des Futurs — Form Logic
  * Gestion du formulaire d'invitation (sections A-E)
+ * A: Intérêt & disponibilité
+ * B: Confort avec le cadre
+ * C: Affinités de chevauchement
+ * D: Cartes / bascules
+ * E: Flux financiers
  */
 
 let formData = {};
@@ -198,22 +203,11 @@ function setupFormListeners() {
     const form = document.getElementById('invite-form');
     if (!form) return;
 
-    // D3 → D4 conditionnel
-    const d3Input = document.getElementById('D3');
-    const d4Group = document.getElementById('D4-group');
-
-    if (d3Input && d4Group) {
-        d3Input.addEventListener('input', () => {
-            d4Group.style.display = d3Input.value.trim() ? 'block' : 'none';
-            autoSave();
-        });
-    }
-
-    // F1 → F2/F3 conditionnels
-    setupSectionFListeners();
+    // E1 → E2/E3 conditionnels (Flux financiers)
+    setupSectionEListeners();
 
     // Auto-save sur tous les champs
-    form.querySelectorAll('input, textarea').forEach(input => {
+    form.querySelectorAll('input, textarea, select').forEach(input => {
         input.addEventListener('change', autoSave);
         if (input.tagName === 'TEXTAREA' || input.type === 'text') {
             input.addEventListener('input', debounce(autoSave, 500));
@@ -225,24 +219,24 @@ function setupFormListeners() {
 }
 
 /**
- * Configure les listeners pour la section F (champs conditionnels)
+ * Configure les listeners pour la section E (champs conditionnels Flux financiers)
  */
-function setupSectionFListeners() {
-    const f1Radios = document.querySelectorAll('input[name="F1"]');
-    const f2Group = document.getElementById('F2-group');
-    const f3Group = document.getElementById('F3-group');
+function setupSectionEListeners() {
+    const e1Radios = document.querySelectorAll('input[name="E1"]');
+    const e2Group = document.getElementById('E2-group');
+    const e3Group = document.getElementById('E3-group');
 
-    if (!f1Radios.length || !f2Group || !f3Group) return;
+    if (!e1Radios.length || !e2Group || !e3Group) return;
 
-    f1Radios.forEach(radio => {
+    e1Radios.forEach(radio => {
         radio.addEventListener('change', () => {
-            const value = document.querySelector('input[name="F1"]:checked')?.value;
+            const value = document.querySelector('input[name="E1"]:checked')?.value;
 
-            // Afficher F2 si "tiers" sélectionné
-            f2Group.style.display = value === 'tiers' ? 'block' : 'none';
+            // Afficher E2 si "tiers" sélectionné
+            e2Group.style.display = value === 'tiers' ? 'block' : 'none';
 
-            // Afficher F3 si "autre" sélectionné
-            f3Group.style.display = value === 'autre' ? 'block' : 'none';
+            // Afficher E3 si "autre" sélectionné
+            e3Group.style.display = value === 'autre' ? 'block' : 'none';
 
             autoSave();
         });
@@ -284,17 +278,17 @@ function collectFormData() {
         D: {
             selectedBascules: Array.from(form.querySelectorAll('input[name="D1"]:checked')).map(cb => cb.value),
             basculeReactions: {},
-            proposedBascule: form.querySelector('#D3')?.value || '',
-            proposalConsent: form.querySelector('#D4')?.checked || false
+            proposedBascule: {
+                category: form.querySelector('#D2-category')?.value || '',
+                title: form.querySelector('#D2-title')?.value || '',
+                concept: form.querySelector('#D2-concept')?.value || '',
+                narrative: form.querySelector('#D2-narrative')?.value || ''
+            }
         },
         E: {
-            captureConsent: form.querySelector('input[name="E1"]:checked')?.value || null,
-            citationConsent: form.querySelector('input[name="E2"]:checked')?.value || null
-        },
-        F: {
-            fluxChoice: form.querySelector('input[name="F1"]:checked')?.value || null,
-            tiersDesignation: form.querySelector('#F2')?.value || '',
-            autreExplication: form.querySelector('#F3')?.value || ''
+            fluxChoice: form.querySelector('input[name="E1"]:checked')?.value || null,
+            tiersDesignation: form.querySelector('#E2')?.value || '',
+            autreExplication: form.querySelector('#E3')?.value || ''
         }
     };
 
@@ -376,48 +370,49 @@ function prefillForm(savedData) {
             });
         }, 100);
 
+        // Proposition de bascule
         if (savedData.D.proposedBascule) {
-            form.querySelector('#D3').value = savedData.D.proposedBascule;
-            document.getElementById('D4-group').style.display = 'block';
-        }
-        if (savedData.D.proposalConsent) {
-            form.querySelector('#D4').checked = true;
+            const proposal = savedData.D.proposedBascule;
+            if (proposal.category) {
+                const select = form.querySelector('#D2-category');
+                if (select) select.value = proposal.category;
+            }
+            if (proposal.title) {
+                const input = form.querySelector('#D2-title');
+                if (input) input.value = proposal.title;
+            }
+            if (proposal.concept) {
+                const textarea = form.querySelector('#D2-concept');
+                if (textarea) textarea.value = proposal.concept;
+            }
+            if (proposal.narrative) {
+                const textarea = form.querySelector('#D2-narrative');
+                if (textarea) textarea.value = proposal.narrative;
+            }
         }
     }
 
-    // Section E
+    // Section E (Flux financiers)
     if (savedData.E) {
-        if (savedData.E.captureConsent) {
-            const radio = form.querySelector(`input[name="E1"][value="${savedData.E.captureConsent}"]`);
-            if (radio) radio.checked = true;
-        }
-        if (savedData.E.citationConsent) {
-            const radio = form.querySelector(`input[name="E2"][value="${savedData.E.citationConsent}"]`);
-            if (radio) radio.checked = true;
-        }
-    }
-
-    // Section F
-    if (savedData.F) {
-        if (savedData.F.fluxChoice) {
-            const radio = form.querySelector(`input[name="F1"][value="${savedData.F.fluxChoice}"]`);
+        if (savedData.E.fluxChoice) {
+            const radio = form.querySelector(`input[name="E1"][value="${savedData.E.fluxChoice}"]`);
             if (radio) {
                 radio.checked = true;
                 // Afficher les champs conditionnels si nécessaire
-                if (savedData.F.fluxChoice === 'tiers') {
-                    document.getElementById('F2-group').style.display = 'block';
-                } else if (savedData.F.fluxChoice === 'autre') {
-                    document.getElementById('F3-group').style.display = 'block';
+                if (savedData.E.fluxChoice === 'tiers') {
+                    document.getElementById('E2-group').style.display = 'block';
+                } else if (savedData.E.fluxChoice === 'autre') {
+                    document.getElementById('E3-group').style.display = 'block';
                 }
             }
         }
-        if (savedData.F.tiersDesignation) {
-            const f2 = form.querySelector('#F2');
-            if (f2) f2.value = savedData.F.tiersDesignation;
+        if (savedData.E.tiersDesignation) {
+            const e2 = form.querySelector('#E2');
+            if (e2) e2.value = savedData.E.tiersDesignation;
         }
-        if (savedData.F.autreExplication) {
-            const f3 = form.querySelector('#F3');
-            if (f3) f3.value = savedData.F.autreExplication;
+        if (savedData.E.autreExplication) {
+            const e3 = form.querySelector('#E3');
+            if (e3) e3.value = savedData.E.autreExplication;
         }
     }
 }
@@ -432,14 +427,6 @@ function handleSubmit(e) {
     const form = document.getElementById('invite-form');
     if (!form.checkValidity()) {
         form.reportValidity();
-        return;
-    }
-
-    // Validation D4 si D3 rempli
-    const d3 = document.getElementById('D3');
-    const d4 = document.getElementById('D4');
-    if (d3?.value.trim() && !d4?.checked) {
-        alert('Merci de cocher la case de consentement pour ta proposition de bascule.');
         return;
     }
 

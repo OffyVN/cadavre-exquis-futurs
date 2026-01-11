@@ -20,13 +20,16 @@ Le site n’est pas pensé pour un trafic large.
 Bloc narratif (issu de Narratif.md)
 Typographie confortable
 Un parapraphe engageant
+Texte centré style générique
 
 ### 3. Principe
 Explication du fonctionnement
 Un parapraphe avant pour poser le contexte
 Expliquer que le futur est représenté par 6 cartes évocatrices posées sur la table.
-Illustrer ce point de départ par les 6 cartes de départ en matrice 2x3. 
-Expliquer que les invités viennent à tour de rôle et que chacun doit faire 3 tâches : recevoir une carte du précédent, retirer une carte, et offrir un nouvelle carte au suivant.
+Illustrer ce point de départ par les 6 cartes de départ en matrice 2x3.
+Les entourer d'un trait fin pour montrer qu'elles forment un tout plus grand qu'elle, un paysage du futur.
+Préciser que chaque étape dure 20 minutes, que c'est une conversation avec Duc et l'autre intervenant.
+Expliquer que les invités viennent à tour de rôle et que chacun, après 20 minutes de conversation, accomplir 3 gestes : recevoir une carte que l'intervenant  précédent ajoute aux 6, soustraire une carte en expliquant pourquoi, et offrir un nouvelle carte au suivant.
 Carousel horizontal
 Images légendées
 Une ligne de conclusion à la fin
