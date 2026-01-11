@@ -73,6 +73,7 @@
   color: var(--color-text-muted);
   letter-spacing: 0.1em;
   margin-bottom: var(--space-4);
+  text-align: center;
 }
 
 .hero-baseline {
@@ -156,11 +157,33 @@
 
 .floating-card {
   position: absolute;
-  width: 220px;
   height: auto;
-  opacity: 0.25;
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Taille XS - très petites cartes */
+.floating-card--xs {
+  width: 100px;
+  opacity: 0.08;
+}
+
+/* Taille S - petites cartes */
+.floating-card--s {
+  width: 140px;
+  opacity: 0.1;
+}
+
+/* Taille M - cartes moyennes */
+.floating-card--m {
+  width: 180px;
+  opacity: 0.12;
+}
+
+/* Taille L - grandes cartes */
+.floating-card--l {
+  width: 220px;
+  opacity: 0.15;
 }
 
 .floating-card-1 {
@@ -224,10 +247,10 @@
 }
 
 @media (max-width: 768px) {
-  .floating-card {
-    width: 140px;
-    opacity: 0.15;
-  }
+  .floating-card--xs { width: 60px; opacity: 0.06; }
+  .floating-card--s { width: 80px; opacity: 0.08; }
+  .floating-card--m { width: 100px; opacity: 0.1; }
+  .floating-card--l { width: 130px; opacity: 0.12; }
 }
 
 .intention-content {
@@ -235,6 +258,7 @@
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 
 .intention-prose {
@@ -245,7 +269,7 @@
 }
 
 .intention-prose p {
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-10);
 }
 
 /* Phrases négatives (Ni... Ni...) */
