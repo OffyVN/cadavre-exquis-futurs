@@ -490,10 +490,6 @@ async function sendToGoogleSheets(formData) {
 
         await fetch(GOOGLE_SHEETS_WEBHOOK, {
             method: 'POST',
-            mode: 'no-cors', // Google Apps Script nécessite no-cors
-            headers: {
-                'Content-Type': 'application/json',
-            },
             body: JSON.stringify(payload)
         });
 
