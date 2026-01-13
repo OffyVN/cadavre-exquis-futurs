@@ -15,7 +15,7 @@ let currentToken = null;
 let currentInvitee = null;
 
 // Google Sheets webhook URL
-const GOOGLE_SHEETS_WEBHOOK = 'https://script.google.com/macros/s/AKfycbwd4OfYSf6nVOF7naWit_wNqgwksD0tkrgN-IWP4z7kTk6r6nP59J-2YQoEzD09XvCt/exec';
+const GOOGLE_SHEETS_WEBHOOK = 'https://script.google.com/macros/s/AKfycbys1YadQPjwvZunLYm2JGQV-ulNB2_8sjZ1c8I28Lm80VzqvZzsgDGXwDyWkz93688e/exec';
 
 /**
  * Initialise le formulaire
@@ -440,6 +440,16 @@ async function handleSubmit(e) {
         return;
     }
 
+    // Afficher l'état de chargement
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnLoading = submitBtn.querySelector('.btn-loading');
+
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = '0.7';
+    btnText.style.display = 'none';
+    btnLoading.style.display = 'inline';
+
     // Collecter les données
     const data = collectFormData();
 
@@ -454,7 +464,7 @@ async function handleSubmit(e) {
 }
 
 /**
- * Envoie les données à Google Sheets
+ * Envoie les données à Google Sheets (via GET avec paramètre data)
  */
 async function sendToGoogleSheets(formData) {
     try {
@@ -488,10 +498,9 @@ async function sendToGoogleSheets(formData) {
             }
         };
 
-        await fetch(GOOGLE_SHEETS_WEBHOOK, {
-            method: 'POST',
-            body: JSON.stringify(payload)
-        });
+        // Utiliser GET avec paramètre data encodé (contourne les problèmes CORS/redirect de POST)
+        const url = GOOGLE_SHEETS_WEBHOOK + '?data=' + encodeURIComponent(JSON.stringify(payload));
+        await fetch(url);
 
         console.log('Réponse envoyée à Google Sheets');
     } catch (error) {
