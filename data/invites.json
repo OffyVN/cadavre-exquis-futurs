@@ -222,5 +222,19 @@
     "formality": "tu",
     "gender": "F",
     "email": "thuyan.nguyen.free@gmail.com"
+  },
+  "1tMBoFWZG3TKWefL": {
+    "firstName": "Julien",
+    "lastName": "Dossier",
+    "formality": "tu",
+    "gender": "M",
+    "email": "juliendossier@me.com"
+  },
+  "SFDPbuHyjgylPnaQ": {
+    "firstName": "Julien",
+    "lastName": "Vidal",
+    "formality": "tu",
+    "gender": "M",
+    "email": "julien.vidal@lilo.org"
   }
 }
