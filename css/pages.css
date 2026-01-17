@@ -786,3 +786,101 @@
     padding: var(--space-16) var(--space-4);
   }
 }
+
+/* === Section Intervenants === */
+
+.section-intervenants {
+  padding: var(--section-padding-y) var(--space-6);
+  background: var(--color-bg-primary);
+}
+
+.intervenants-intro {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto var(--space-12);
+  text-align: center;
+}
+
+.intervenants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-8);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.intervenant-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-6);
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.intervenant-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: var(--space-4);
+  box-shadow: var(--shadow-md);
+}
+
+.intervenant-name {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.intervenant-creneau {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sm);
+  color: var(--color-accent);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-3);
+}
+
+.intervenant-bio {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-4);
+}
+
+.intervenant-links {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.intervenant-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-bg-primary);
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.intervenant-links a:hover {
+  background: var(--color-accent);
+  color: white;
+}
+
+.intervenant-links svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 768px) {
+  .intervenants-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}
